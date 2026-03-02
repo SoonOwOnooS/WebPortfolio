@@ -1,0 +1,25 @@
+.sectionIcon {
+    width: 100px;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.sectionIcon:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.buttonIcon {
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    object-fit: contain;
+}

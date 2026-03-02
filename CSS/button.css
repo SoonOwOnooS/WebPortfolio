@@ -1,0 +1,51 @@
+.submitButton {
+    background-color: rgb(17, 89, 78);
+    align-items: flex-start;
+    margin: 0px 10px;
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid rgb(160, 242, 230);
+    border-right: 2px solid rgb(160, 242, 230);
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 50px;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #cacaca;
+    font-weight: bold;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.submitButton::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    inset: 0;
+    background: white;
+    mix-blend-mode: difference;
+    border-radius: 200%;
+    transform: translate(-100%, 50%);
+}
+
+.submitButton:hover::before {
+    transition: 0.3s;
+    transform: translate(0, 0);
+    border-radius: 0;
+}
+
+.submitButton:active{
+    transition: 0.3s;
+    transform: translateY(5px);
+}
