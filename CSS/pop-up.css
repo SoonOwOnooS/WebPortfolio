@@ -1,0 +1,118 @@
+.pop-up-background {
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+    z-index: 1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity: 0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.pop-up-background.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.panel {
+    position:relative;
+    width:50%;
+    height: 80%;
+    background: white;
+    border-radius:12px;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel.active {
+    opacity: 1;
+}
+
+.panel .close-btn {
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(255, 255, 255, 0.2);
+    justify-content: center;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.panel img {
+    width:100%;
+    height:40%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.panel .content {
+    padding:10px 30px 10px;
+    overflow-y:auto;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.panel .content .title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    margin: 0.8rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid
+}
+
+.panel .content .description {
+    font-size: 16px;
+    padding: 0 1rem 1rem;
+}
+
+.contributor{
+    background:#f5f5f5;
+    padding:18px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.contributor-title{
+    font-weight:600;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.contributor-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contributor-item {
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    padding-left:12px;
+    border-left:3px solid var(--background-color);
+}
+
+.contributor-item .name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contributor-item .position {
+    font-size:14px;
+    color:#555;
+}

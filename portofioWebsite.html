@@ -6,16 +6,19 @@
     <title>Woon Soon Porfolio Website</title>
     <link rel="stylesheet" href="CSS/background.css">
     <link rel="stylesheet" href="CSS/button.css">
-    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Icon.css">
+    <link rel="stylesheet" href="CSS/pop-up.css">
 </head>
 <body>
+
+    <!-- background -->
     <div class="container">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    <div></div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
     </div>
+
     <div class="headerContainer">
         <img class="logo" src="Icon/Logo.png" alt="Logo">
         <nav>
@@ -24,9 +27,10 @@
             <a href="#">Contact</a>
         </nav>
     </div>
-    <section id="home" class="billboard">
+
+    <section class="billboard">
         <div class="billboardContent">
-            <h1>Welcome to my profolio</h1>
+            <h1>Welcome to my <br>profolio</h1>
             <p>Discover my tech projects, art, and more.</p>
             <a href="https://github.com/HooWoonSoon" class="sectionIcon" target="_blank">
                 <span>Github</span>
@@ -35,27 +39,30 @@
             <a href="" class="sectionIcon">
                 <span>LinkedIn</span>
                 <img class="buttonIcon" src="Icon/LinkedIn Logo.png" alt="">
-            </a>
+            </a><br>
+            <div class="button-box download">
+                <a href="#" class="button">Download Portfolio</a>
+            </div>
         </div>
     </section>
 
-    <section class="document">
-        <div id="home" class="aboutMe">
-            <div class="profileFrame">    
+    <section class="home-introduction">
+        <div class="aboutMe">
+            <div class="profileFrame">
                 <div class="profile">
                     <img src="Image/无罪的莉莉娅2.png" alt="">
                 </div>
             </div>
-            
+
             <div class="introduction">
                 <h1>Hi I'm Woon Soon</h1>
                 <div class="changeText">
                     <h3>And I'm a passionate</h3>
                     <h3>
                         <span class="word">Programmer</span>
-                        <span class="word">Game Developer</span>
-                        <span class="word">3D Artist</span>
-                    </h3> 
+                        <span class="word">Game&nbsp;Developer</span>
+                        <span class="word">3D&nbsp;Generlist</span>
+                    </h3>
                 </div>
                 <p>I am honing my skills in game development, I learned:</p>
                 <div class="skills">Unity3D</div>
@@ -64,45 +71,285 @@
                 <div class="skills">Substance Painter</div>
                 <div class="skills">Figma</div>
                 <div class="skills">Unreal Engine</div>
-                <div class="skills">HTML&CSS</div>
+                <div class="skills">Web</div>
                 <div class="skills">Github</div>
             </div>
         </div>
 
-
-        <div class="flexContainer">
-            <div class ="flexItem technical">
-                <div class="flexContent">                
-                    <h2>Technical Projects</h2>
-                    <p>The technical projects I have worked on game development, Unity and Unreal Engine.</p>
-                </div>
-            </div>
-
-            <div class ="flexItem artwork">
-                <div class="flexContent">
-                    <h2>Artistic Works</h2>
-                    <p>The artistic works I have created include digital paintings, 3D modeling and poster.</p>
-                </div>
-            </div>
+        <div class="main-text">
+            <h2>About Me</h2>
         </div>
+
+        <section class="section-introduction">    
+            <div class="introduction-box">
+                    <svg class="icon education" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                    fill="white" viewBox="0 0 24 24" >
+                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                    <path d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z"></path>
+                    </svg>
+
+                    <h3>Education</h3>
+                    <p>I studying in Asia Pacific University major in becholor's degree of Game Development</p>
+                    <div class="button-box read-more">
+                    <a href="#" class="button">Read More</a>
+                </div>
+            </div>         
+            <div class="introduction-box">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50"  
+                fill="white" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M21 2h-5c-.3 0-.58.13-.77.37l-8.3 10.14L5 10.58V7.99H3v3c0 .27.11.52.29.71l3 3 .09.09-4.79 4.79 2.83 2.83 4.79-4.79.09.09 3 3c.19.19.44.29.71.29h3v-2h-2.59l-1.93-1.93 10.14-8.3c.23-.19.37-.47.37-.77V3c0-.55-.45-1-1-1m-1 5.53-9.93 8.13-1.72-1.72 8.13-9.93h3.53v3.53Z"></path>
+                </svg>
+
+                <h3>Project</h3>
+                <p>I made 6 game demo developed by Unity3D and Unreal Engine</p>
+                <div class="button-box read-more">
+                    <a href="#" class="button">Read More</a>
+                </div>
+            </div>                   
+        </section>
+
+        <div class="main-text">
+            <h2>Skill</h2>
+        </div>
+
+        <section class="section-skills">
+            <div class="skill-main">
+                <div class="skill-left">
+                    <h3>Technical Skills</h3>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Unity3D</p>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="unity"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Unreal Engine</p>
+                            <p>Understand</p>
+                        </div>
+                        <div class="bar">
+                            <span class="unreal"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Substance Painter</p>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="substance"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>3DsMax</p>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="max"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Drawing</p>
+                            <p>Understand</p>
+                        </div>
+                        <div class="bar">
+                            <span class="drawing"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>C#</p>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="csharp"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>HTML</p>
+                            <p>Nood</p>
+                        </div>
+                        <div class="bar">
+                            <span class="html"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>CSS</p>
+                            <p>Nood</p>
+                        </div>
+                        <div class="bar">
+                            <span class="css"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>JavaScript</p>
+                            <p>Nood</p>
+                        </div>
+                        <div class="bar">
+                            <span class="javascript"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-description">
+                    <p>i readf dfadfad dfadf llid dfappeo ldfm</p>
+                </div>
+            </div>
+        </section>
+        
     </section>
-
-        <div class="flexContainer container-wrapper">
-            <div class="contactForm">
-                <form action="https://formsubmit.co/hoowoonsoon12345@gmail.com" method="POST">
-                    <h2>Send Me Message</h2>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="message">Message:</label><br>
-                    <textarea name="message" id="message" rows="4" required></textarea><br>
-                    <button type="submit" class="submitButton">Send Message</button>
-                </form>
+    
+<section id="portfolio" class="portfolio">
+    <div class="main-text">
+        <h2>Portfolio</h2>
+    </div>
+    
+    <div class="category">
+        <div class ="category-item technical" data-type="technical">
+            <div class="item-content">
+                <h2>Technical Projects</h2>
+                <p>The technical projects I have worked on game development, Unity and Unreal Engine.</p>
             </div>
         </div>
+
+        <div class ="category-item artwork" data-type="artwork">
+            <div class="item-content">
+                <h2>Artistic Works</h2>
+                <p>The artistic works I have created include digital paintings, 3D modeling and poster.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex-container">    
+        <div class="filter-button">
+            <button data-time="all" class="btn">
+                <span>All</span>
+            </button>
+            <button data-time="latest" class="btn">
+                <span>Latest</span>
+            </button>
+            <button data-time="old" class="btn">
+                <span>Old</span>
+            </button>
+        </div>
+
+        <div class="portfolio-gallery">
+            <div class="port-box" data-type="technical" data-time="old">
+                <div class="port-image">
+                    <img src="Image/Code of Defiance.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Code of Defiance</h3>
+                    <p>
+                        A game demo by a team of students, 
+                        a game demo about an AI rescuing a mentally devastated man. 
+                        He is seen as having a connection to the war enterprise.
+                    </p>
+                    <button class="button-panel" data-target="code-of-defiance">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-type="technical" data-time="old">
+                <div class="port-image">
+                    <img src="Image/Code of Defiance.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Code of Defiance</h3>
+                    <p>
+                        A game demo by a team of students, 
+                        a game demo about an AI rescuing a mentally devastated man. 
+                        He is seen as having a connection to the war enterprise.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="port-box" data-type="technical" data-time="old">
+                <div class="port-image">
+                    <img src="Image/Code of Defiance.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Code of Defiance</h3>
+                    <p>
+                        A game demo by a team of students, 
+                        a game demo about an AI rescuing a mentally devastated man. 
+                        He is seen as having a connection to the war enterprise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-wrapper">
+    <div class="contactForm">
+        <form action="https://formsubmit.co/hoowoonsoon12345@gmail.com" method="POST">
+            <h2>Send Me Message</h2>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea name="message" id="message" rows="4" required></textarea><br>
+            <button type="submit" class="submitButton">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<div class="pop-up-background">
+    <div class="panel" id="code-of-defiance">
+        <button class="close-btn">x</button>
+        <img src="Image/Code of Defiance.png" alt="">
+        <div class="content">
+            <span class="title">Code of Defiance</span>
+
+            <span class="description">
+                A game demo by a team of students, 
+                a game demo about an AI rescuing a mentally devastated man. 
+                He is seen as having a connection to the war enterprise.
+            </span>
+
+            <div class="contributor">
+                <div class="contributor-title">
+                    Project Contributor
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Programmer, Level Design</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Darren Hon</span>
+                        <span class="position">Level Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer>
     <center>
@@ -110,6 +357,8 @@
     </center>
 </footer>
 
-<script src="JavaScript/Script.js"></script>
+<script src="JavaScript/script.js"></script>
+<script src="JavaScript/filter.js"></script>
+<script src="JavaScript/popup.js"></script>
 </body>
 </html>
