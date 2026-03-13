@@ -17,6 +17,7 @@
 }
 
 .panel {
+    display: none;
     position:relative;
     width:50%;
     height: 80%;
@@ -24,11 +25,11 @@
     border-radius:12px;
     overflow: hidden;
     opacity: 0;
-    display: flex;
     flex-direction: column;
 }
 
 .panel.active {
+    display: flex;
     opacity: 1;
 }
 
@@ -38,22 +39,31 @@
     right: 1rem;
     width: 2rem;
     height: 2rem;
-    background: rgb(255, 255, 255, 0.2);
+    background: darkred;
     justify-content: center;
     border:none;
     font-size:24px;
     cursor:pointer;
     color: black;
     border: 1px solid gray;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: 50%;
 }
 
-.panel img {
+.panel .close-btn:hover {
+    background: red;
+    color: white;
+}
+
+.panel .main-area {
     width:100%;
-    height:40%;
-    object-fit:cover;
-    flex-shrink:0;
+    height:50%;
+    background-color: black;
+}
+
+.main-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .panel .content {
@@ -61,8 +71,14 @@
     overflow-y:auto;
     flex:1;
     display:flex;
+    overflow-y: scroll;
+    scrollbar-width: auto;
     flex-direction:column;
     gap:12px;
+}
+
+.panel .content img {
+    object-fit: contain;
 }
 
 .panel .content .title {
@@ -79,7 +95,7 @@
     padding: 0 1rem 1rem;
 }
 
-.contributor{
+.panel-area {
     background:#f5f5f5;
     padding:18px;
     border-radius:10px;
@@ -88,7 +104,7 @@
     gap:14px;
 }
 
-.contributor-title{
+.panel-area-title {
     font-weight:600;
     border-bottom:1px solid #ddd;
     padding-bottom:8px;
@@ -96,7 +112,11 @@
 
 .contributor-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+}
+
+.contributor-info a {
+    padding: 0.5rem;
 }
 
 .contributor-item {
@@ -115,4 +135,62 @@
 .contributor-item .position {
     font-size:14px;
     color:#555;
+}
+
+.panel-area a {
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+}
+
+.panel-area a:hover {
+    background: gainsboro;
+}
+
+.panel-area img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.panel-area-software img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.panel-area-source {
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.panel-area-screenshot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.panel-area-uv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 12px;
+}
+
+
+.panel-area-screenshot img,
+.panel-area-uv img {
+    height: auto;
+    background: black;
+    width: 100%;
+    max-height: 110px;
+    object-fit: cover;
 }

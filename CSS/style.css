@@ -305,19 +305,25 @@ nav a:hover {
 
 /*--skill box--*/
 .section-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 2rem;
+    gap: 1rem;
+}
+
+.art-3D-skill,
+.game-development-skill,
+.other-skill {
+    flex: 1 1 300px;
     border-radius: 10px;
+    padding: 10px;
     background-color: var(--transparency-background-color);
 }
 
-.skill-main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 30px;
-}
-
-.skill-main h3 {
+.game-development-skill h3,
+.art-3D-skill h3,
+.other-skill h3 {
     margin-bottom: 1rem;
     color: white;
     font-size: 25px;
@@ -328,26 +334,40 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-.skill-left {
-    padding: 0 2rem 0 ;
-    max-height: 600px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
+.skill-description {
+    background-color: rgba(255, 255, 255, 0.332);
 }
 
+.skill-bar-content {
+    max-height: 330px;
+    padding: 0 2rem 0 ;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    margin-top: 1rem;
+}
 
-.skill-left .skill-bar .info {
+.game-development-skill .skill-bar .info,
+.art-3D-skill .skill-bar .info,
+.other-skill .skill-bar .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
 }
 
+.info span {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
 .info p {
     color: white
 }
 
-.skill-left .skill-bar .bar {
+.game-development-skill .skill-bar .bar,
+.art-3D-skill .skill-bar .bar,
+.other-skill .skill-bar .bar {
     width: 100%;
     height: 12px;
     background-color: white;
@@ -407,12 +427,12 @@ nav a:hover {
 }
 
 .skill-bar .bar .drawing {
-    width: 20%;
+    width: 25%;
     animation: drawing 1s forwards;
 }
 @keyframes drawing {
     from { width: 0; }
-    to { width: 20%; }
+    to { width: 25%; }
 }
 
 .skill-bar .bar .csharp {
@@ -425,21 +445,21 @@ nav a:hover {
 }
 
 .skill-bar .bar .html {
-    width: 10%;
-    animation: html 0.5s forwards;
+    width: 20%;
+    animation: html 1s forwards;
 }
 @keyframes html {
     from { width: 0; }
-    to { width: 10%; }
+    to { width: 20%; }
 }
 
 .skill-bar .bar .css {
-    width: 10%;
-    animation: css 0.5s forwards;
+    width: 20%;
+    animation: css 1s forwards;
 }
 @keyframes css {
     from { width: 0; }
-    to { width: 10%; }
+    to { width: 20%; }
 }
 
 .skill-bar .bar .javascript {
@@ -451,8 +471,26 @@ nav a:hover {
     to { width: 5%; }
 }
 
+.skill-bar .bar .photoshop {
+    width: 25%;
+    animation: photoshop 1s forwards;
+}
+@keyframes photoshop {
+    from { width: 0; }
+    to { width: 25%; }
+}
+
+.skill-bar .bar .after-effect {
+    width: 10%;
+    animation: after-effect 0.5s forwards;
+}
+@keyframes after-effect {
+    from { width: 0; }
+    to { width: 10%; }
+}
+
 .skill-description {
-    background-color: white;
+    padding: 0 1rem;
 }
 
 .portfolio {
@@ -466,9 +504,9 @@ nav a:hover {
 .category {
     margin: 2rem;
     display: flex;
-    background: var(--transparency-background-color);
     justify-content: space-around;
     flex-wrap: wrap;
+    border-bottom: white solid 1px;
 }
 
 .category-item {
@@ -503,7 +541,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-.category-item.artwork {
+.category-item.design {
     background: url(../Image/FlexArtisticWorksUI.png) no-repeat center center;
     background-size: cover;
     position: relative;
@@ -518,12 +556,18 @@ nav a:hover {
 
 .flex-container {
     margin: 2rem;
+    align-items: center;
+}
+
+.filter-option {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .filter-button {
     margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
 }
 
@@ -558,8 +602,15 @@ nav a:hover {
     box-shadow: 0 0.4em 0.019em var(--button-color);
 }
 
-.filter-button span:hover,
+.filter-button span:hover {
+    transition: all 0.5s;
+    transform: translate(0, 0.4em);
+    box-shadow: 0 0 0 0 #fff;
+}
+
 .filter-button span.active {
+    color: whitesmoke;
+    background: var(--button-color);
     transition: all 0.5s;
     transform: translate(0, 0.4em);
     box-shadow: 0 0 0 0 #fff;
@@ -569,6 +620,63 @@ nav a:hover {
     transition: all 1s;
 }
 
+.filter-person-or-group {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    padding: 2px;
+
+    border-radius: 0.3rem;
+    border-bottom: 1px solid rgb(160, 242, 230);
+    border-right: 1px solid rgb(160, 242, 230);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+
+    background: var(--transparency-background-color);
+}
+
+.radio {
+    flex: 1;
+}
+
+.radio input {
+    display: none;
+}
+
+.filter-person-or-group .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.2rem;
+    transition: 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+/* selected */
+.slider {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+
+    width: calc(50% - 2px);
+    height: calc(100% - 4px);
+
+    background: var(--transparency-background-color);
+    box-shadow: inset 0 0 0 1px white;
+    border-radius: 0.2rem;
+
+    transition: transform 0.25s ease;
+}
+
+#group:checked ~ .slider {
+    transform: translateX(100%);
+}
+
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -576,6 +684,7 @@ nav a:hover {
 }
 
 .port-box {
+    max-height: 280px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -592,11 +701,12 @@ nav a:hover {
 }
 
 .port-box.hide {
-    opacity: 0;
+    display: none;
     pointer-events: none;
 }
 
 .port-box.show{
+    display: block;
     animation: jelly .6s;
 }
 
@@ -626,18 +736,27 @@ nav a:hover {
 
 .port-image {
     position: relative;
+    background: black;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
 }
 
 .port-image img {
     width: 100%;
-    opacity: 0.5s;
     height: 100%;
+    object-fit: contain;
     transition: 0.5s;
+}
+
+.port-box .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    z-index: 1;
 }
 
 .port-content {

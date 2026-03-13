@@ -4,6 +4,7 @@ document.querySelectorAll(".button-panel").forEach(box => {
         e.stopPropagation();
 
         const target = box.dataset.target;
+        console.log("Target panel id:", target)
 
         document.querySelectorAll(".panel").forEach(panel=>{
             panel.classList.remove("active");

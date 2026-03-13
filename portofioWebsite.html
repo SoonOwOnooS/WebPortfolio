@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="CSS/background.css">
     <link rel="stylesheet" href="CSS/button.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/Icon.css">
     <link rel="stylesheet" href="CSS/pop-up.css">
+    <link rel="stylesheet" href="CSS/viewer.css">
 </head>
 <body>
 
@@ -32,13 +32,14 @@
         <div class="billboardContent">
             <h1>Welcome to my <br>profolio</h1>
             <p>Discover my tech projects, art, and more.</p>
-            <a href="https://github.com/HooWoonSoon" class="sectionIcon" target="_blank">
+            <a href="https://github.com/HooWoonSoon" class="buttonIcon">
                 <span>Github</span>
-                <img class="buttonIcon" src="Icon/Github Logo.png" alt="">
+                <img class="Icon" src="Icon/Github Logo.png" alt="">
             </a>
-            <a href="" class="sectionIcon">
+            <a href="" class="buttonIcon">
                 <span>LinkedIn</span>
-                <img class="buttonIcon" src="Icon/LinkedIn Logo.png" alt="">
+                <span class="tooltip">Invalid</span>
+                <img class="Icon" src="Icon/LinkedIn Logo.png" alt="">
             </a><br>
             <div class="button-box download">
                 <a href="#" class="button">Download Portfolio</a>
@@ -114,13 +115,13 @@
         </div>
 
         <section class="section-skills">
-            <div class="skill-main">
-                <div class="skill-left">
-                    <h3>Technical Skills</h3>
-
+            <div class="game-development-skill">
+                <h3>Game Development</h3>
+                
+                <div class="skill-bar-content">
                     <div class="skill-bar">
                         <div class="info">
-                            <p>Unity3D</p>
+                            <span>Unity3D</span>
                             <p>Normal</p>
                         </div>
                         <div class="bar">
@@ -130,7 +131,7 @@
 
                     <div class="skill-bar">
                         <div class="info">
-                            <p>Unreal Engine</p>
+                            <span>Unreal Engine</span>
                             <p>Understand</p>
                         </div>
                         <div class="bar">
@@ -140,48 +141,60 @@
 
                     <div class="skill-bar">
                         <div class="info">
-                            <p>Substance Painter</p>
-                            <p>Normal</p>
-                        </div>
-                        <div class="bar">
-                            <span class="substance"></span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-bar">
-                        <div class="info">
-                            <p>3DsMax</p>
-                            <p>Normal</p>
-                        </div>
-                        <div class="bar">
-                            <span class="max"></span>
-                        </div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="info">
-                            <p>Drawing</p>
-                            <p>Understand</p>
-                        </div>
-                        <div class="bar">
-                            <span class="drawing"></span>
-                        </div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="info">
-                            <p>C#</p>
+                            <span>C#</span>
                             <p>Normal</p>
                         </div>
                         <div class="bar">
                             <span class="csharp"></span>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="art-3D-skill">
+                <h3>Art/3D</h3>
+                
+                <div class="skill-bar-content">
                     <div class="skill-bar">
                         <div class="info">
-                            <p>HTML</p>
-                            <p>Nood</p>
+                            <span>Substance Painter</span>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="substance"></span>
+                        </div>
+                    </div>
+                
+                    <div class="skill-bar">
+                        <div class="info">
+                            <span>3DsMax</span>
+                            <p>Normal</p>
+                        </div>
+                        <div class="bar">
+                            <span class="max"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                    <div class="info">
+                        <span>Drawing</span>
+                        <p>Understand</p>
+                    </div>
+                    <div class="bar">
+                        <span class="drawing"></span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other-skill">
+                <h3>Other Skill</h3>
+                
+                <div class="skill-bar-content">
+                    <div class="skill-bar">
+                        <div class="info">
+                            <span>HTML</span>
+                            <p>Understand</p>
                         </div>
                         <div class="bar">
                             <span class="html"></span>
@@ -190,8 +203,8 @@
 
                     <div class="skill-bar">
                         <div class="info">
-                            <p>CSS</p>
-                            <p>Nood</p>
+                            <span>CSS</span>
+                            <p>Understand</p>
                         </div>
                         <div class="bar">
                             <span class="css"></span>
@@ -200,21 +213,36 @@
 
                     <div class="skill-bar">
                         <div class="info">
-                            <p>JavaScript</p>
+                            <span>JavaScript</span>
                             <p>Nood</p>
                         </div>
                         <div class="bar">
                             <span class="javascript"></span>
                         </div>
                     </div>
-                </div>
 
-                <div class="skill-description">
-                    <p>i readf dfadfad dfadf llid dfappeo ldfm</p>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <span>Photoshop</span>
+                            <p>Understand</p>
+                        </div>
+                        <div class="bar">
+                            <span class="photoshop"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <span>Abode After Effect</span>
+                            <p>Nood</p>
+                        </div>
+                        <div class="bar">
+                            <span class="after-effect"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        
+        </section> 
     </section>
     
 <section id="portfolio" class="portfolio">
@@ -223,36 +251,43 @@
     </div>
     
     <div class="category">
-        <div class ="category-item technical" data-type="technical">
+        <div class ="category-item technical" data-category="technical">
             <div class="item-content">
                 <h2>Technical Projects</h2>
                 <p>The technical projects I have worked on game development, Unity and Unreal Engine.</p>
             </div>
         </div>
 
-        <div class ="category-item artwork" data-type="artwork">
+        <div class ="category-item design" data-category="design">
             <div class="item-content">
-                <h2>Artistic Works</h2>
-                <p>The artistic works I have created include digital paintings, 3D modeling and poster.</p>
+                <h2>Design Works</h2>
+                <p>The design works I have created include digital paintings, 3D modeling, figma and poster.</p>
             </div>
         </div>
     </div>
     
-    <div class="flex-container">    
-        <div class="filter-button">
-            <button data-time="all" class="btn">
-                <span>All</span>
-            </button>
-            <button data-time="latest" class="btn">
-                <span>Latest</span>
-            </button>
-            <button data-time="old" class="btn">
-                <span>Old</span>
-            </button>
+    <div class="flex-container">
+        <div class="filter-option">
+            <div class="filter-button">
+            </div>
+
+            <div class="filter-person-or-group">
+                <input type="radio" name="type" id="person">
+                <label class="radio" for="person">
+                    <span class="name">Person</span>
+                </label>
+
+                <input type="radio" name="type" id="group" checked>
+                <label class="radio" for="group">
+                    <span class="name">Group</span>
+                </label>
+
+                <span class="slider"></span>
+            </div>
         </div>
 
         <div class="portfolio-gallery">
-            <div class="port-box" data-type="technical" data-time="old">
+            <div class="port-box" data-category="technical" data-type="unity" id="group">
                 <div class="port-image">
                     <img src="Image/Code of Defiance.png" alt="">
                 </div>
@@ -267,31 +302,157 @@
                 </div>
             </div>
 
-            <div class="port-box" data-type="technical" data-time="old">
+            <div class="port-box" data-category="technical" data-type="unity" id="group">
                 <div class="port-image">
-                    <img src="Image/Code of Defiance.png" alt="">
+                    <img src="Image/Zongzi Across Asia.png" alt="">
                 </div>
                 <div class="port-content">
-                    <h3>Code of Defiance</h3>
+                    <h3>Zongzi Across Asia</h3>
                     <p>
                         A game demo by a team of students, 
-                        a game demo about an AI rescuing a mentally devastated man. 
-                        He is seen as having a connection to the war enterprise.
+                        A restaurant simulation game surrendered by ASEAN theme,
+                        to promoting about food, culture and unity.
                     </p>
+                    <button class="button-panel" data-target="zongzi-across-asia">Read More</button>
                 </div>
             </div>
-            
-            <div class="port-box" data-type="technical" data-time="old">
+
+            <div class="port-box" data-category="technical" data-type="unreal" id="group">
                 <div class="port-image">
-                    <img src="Image/Code of Defiance.png" alt="">
+                    <img src="Image/Dino Tales.png" alt="">
                 </div>
                 <div class="port-content">
-                    <h3>Code of Defiance</h3>
+                    <h3>Dino Tales</h3>
                     <p>
-                        A game demo by a team of students, 
-                        a game demo about an AI rescuing a mentally devastated man. 
-                        He is seen as having a connection to the war enterprise.
+                        A game demo by a team of students, Year2 sem 1 project,  
+                        3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
                     </p>
+                    <button class="button-panel" data-target="dino-tales">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-image">
+                    <img src="Image/The Witch Lament Poet.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>The Witch Lament Poet</h3>
+                    <p>
+                        A game demo by a team of students, Year2 sem 1 project,  
+                        A very disgraceful project, story about the last witch's doppelganger.
+                    </p>
+                    <button class="button-panel" data-target="the-witch-lament-poet">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-image">
+                    <img src="Image/The war pillow fight.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>The War Pillow Fight</h3>
+                    <p>
+                        A game demo by a team of students, Year3 sem 1 project,  
+                        Multiplayer project, gameplay about player fight over the pillow and attack the designated opponent
+                    </p>
+                    <button class="button-panel" data-target="the-war-pillow-flight">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="technical" data-type="unity" id="person">
+                <div class="port-image">
+                    <img src="Image/TRPG Toolkit - In Progress.png" alt="">
+                </div>
+                <img src="Icon/maintance.png" alt="" class="icon">
+                <div class="port-content">
+                    <h3>TRPG Toolkit - In Progress</h3>
+                    <p>
+                        A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
+                        Project 2D art - Tactic Orge video game copyright by Square Enix. 
+                        This project still in progress.
+                    </p>
+                    <button class="button-panel" data-target="TRPG">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="design" data-type="3d" id="group">
+                <div class="port-image">
+                    <img src="Image/Steampunk island.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Steampunk Island</h3>
+                    <p>
+                        A game demo by a team of students, Year3 sem 1 project,  
+                        Unreal Engine asset crafting and environment placing group project.
+                    </p>
+                    <button class="button-panel" data-target="steampunk-island">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="design" data-type="2d" id="group">
+                <div class="port-image">
+                    <img src="Image/Figma StudyPal.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Figma - StudyPal</h3>
+                    <p>
+                        A StudyPal usability mobile application design, project done by group.
+                    </p>
+                    <button class="button-panel" data-target="StudyPal">Read More</button>
+                </div>
+            </div>
+
+           <div class="port-box" data-category="design" data-type="2d" id="person">
+                <div class="port-image">
+                    <img src="Image/Postcard mock up.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Postcard Mock Up</h3>
+                    <p>
+                        A postcard design in my Year 1 Semester 1,  
+                        Topic about the video game - Octopath Traveller.
+                    </p>
+                    <button class="button-panel" data-target="postcard">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-image">
+                    <img src="Image/Malaysia Railway Station Render.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Building Model - Malaysia Railway Station</h3>
+                    <p>
+                        A 3D Modelling craft by myself, refers to Malaysia, Selangor Historical Railway Station.
+                    </p>
+                    <button class="button-panel" data-target="railway-station">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-image">
+                    <img src="Image/Cyberpunk Railway - Personal Part.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Cyberpunk Railway - Personal Part</h3>
+                    <p>
+                        The group assignment project but individual video clips. One 3D rendered video.
+                    </p>
+                    <button class="button-panel" data-target="cyberpunk-railway">Read More</button>
+                </div>
+            </div>
+
+            <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-image">
+                    <img src="Image/Steampunk machine - props machine.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Steampunk machine - Asset</h3>
+                    <p>
+                        The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
+                        modelled by me.
+                    </p>
+                    <button class="button-panel" data-target="steampunk-machine">Read More</button>
                 </div>
             </div>
         </div>
@@ -318,7 +479,9 @@
 <div class="pop-up-background">
     <div class="panel" id="code-of-defiance">
         <button class="close-btn">x</button>
-        <img src="Image/Code of Defiance.png" alt="">
+        <div class="main-area">
+            <img src="Image/Code of Defiance.png" alt="">
+        </div>
         <div class="content">
             <span class="title">Code of Defiance</span>
 
@@ -328,10 +491,9 @@
                 He is seen as having a connection to the war enterprise.
             </span>
 
-            <div class="contributor">
-                <div class="contributor-title">
-                    Project Contributor
-                </div>
+            
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
 
                 <div class="contributor-info">
                     <div class="contributor-item">
@@ -346,9 +508,782 @@
                         <span class="position">Level Design</span>
                     </div>
                 </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Ha Shun Jet</span>
+                        <span class="position">Programmer, Level Design</span>
+                    </div>
+                    <a href="https://www.linkedin.com/in/hashunjet/">LinkedIn</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Tan Wei Jun</span>
+                        <span class="position">Level Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/13heAb8-dkNewPh5g23IRBNxhAVlSiOgY/view?usp=sharing">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unity.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Code of Defiance Screenshot 1.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 2.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 3.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 4.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 5.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 6.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 7.png" alt="">
+                    <img src="Image/Code of Defiance Screenshot 8.png" alt="">
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="panel" id="zongzi-across-asia">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Zongzi Across Asia.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Zongzi Across Asia</span>
+
+            <span class="description">
+                A game demo by a team of students, 
+                A restaurant simulation game surrendered by ASEAN theme,
+                to promoting about food, culture and unity.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Programmer, Level Design</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Darren Hon</span>
+                        <span class="position">Level Design</span>
+                    </div>
+                    <a href="#">LinkedIn</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Li Xinan</span>
+                        <span class="position">Level Design, Character Artist</span>
+                    </div>
+                    <a href="http://linkedin.com/in/xinan-li-b370273b6">LinkedIn</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Yap Yong Kang</span>
+                        <span class="position">Artist, Level Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/13heAb8-dkNewPh5g23IRBNxhAVlSiOgY/view?usp=sharing">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                    <a href="https://github.com/HooWoonSoon/Zongzi-Shop-Galgame">
+                        <span>Github</span>
+                        <img src="Icon/Github Logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unity.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Zongzi Across Asia Screenshot 1.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 2.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 3.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 4.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 5.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 6.png" alt="">
+                    <img src="Image/Zongzi Across Asia Screenshot 7.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="dino-tales">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Dino Tales.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Dino Tales</span>
+
+            <span class="description">
+                A game demo by a team of students, 
+                3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Game Design, 3D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Chin Paul Cheng</span>
+                        <span class="position">Game Design, Rigging</span>
+                    </div>
+                    <a href="https://www.linkedin.com/in/paul-shen-ching-052ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Mohammand Zhairu</span>
+                        <span class="position">Game Design</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Yap Zhen Fung</span>
+                        <span class="position">Game Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://www.youtube.com/watch?v=OrD5H8Ndgto">
+                        <span>Video</span>
+                        <img src="Icon/Youtube.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unreal Engine.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Dino Tales Screenshot1.png" alt="">
+                    <img src="Image/Dino Tales Screenshot2.png" alt="">
+                    <img src="Image/Dino Tales Screenshot3.png" alt="">
+                    <img src="Image/Dino Tales Screenshot4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="the-witch-lament-poet">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/The Witch Lament Poet.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">The Witch Lament Poel</span>
+
+            <span class="description">
+                A very disgraceful project, story about the last witch's doppelganger, 
+                Her birth also signifies that the witch entity and magic are teetering on the brink of collapse. 
+                Every doppelganger is purity but it don't meant their entity is a person who is easy to get along with. 
+                All of them for the entity, just a toys that can be destroyed and manipulate.
+                However it's luckly also unluckly, she haven't meet with her entity, but her birth is company of death.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Programmer, Game Design, 2D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Ng Kheng Shin</span>
+                        <span class="position">Level Design, Programmer</span>
+                    </div>
+                   <a href="https://creeperxd.itch.io/">Itch.io</a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/1ZWOtDGYvCwXEAjy4jrKIFI12PO6eYejM/view?usp=drive_link">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unity.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/The Witch Lament Poet Screenshot 1.png" alt="">
+                    <img src="Image/The Witch Lament Poet Screenshot 2.png" alt="">
+                    <img src="Image/The Witch Lament Poet Screenshot 3.png" alt="">
+                    <img src="Image/The Witch Lament Poet Screenshot 4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="the-war-pillow-flight">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/The war pillow fight.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">The War Pillow Fight</span>
+
+            <span class="description">
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Programmer, Game Design</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Ng Kheng Shin</span>
+                        <span class="position">Level Design, Programmer</span>
+                    </div>
+                    <a href="https://creeperxd.itch.io/">Itch.io</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Li Xinan</span>
+                        <span class="position">Level Design, Programmer</span>
+                    </div>
+                    <a href="http://linkedin.com/in/xinan-li-b370273b6">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/1ZWOtDGYvCwXEAjy4jrKIFI12PO6eYejM/view?usp=drive_link">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unity.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/The war pillow fight Screenshot 1.png" alt="">
+                    <img src="Image/The war pillow fight Screenshot 2.png" alt="">
+                    <img src="Image/The war pillow fight Screenshot 3.png" alt="">
+                    <img src="Image/The war pillow fight Screenshot 4.png" alt="">
+                    <img src="Image/The war pillow fight Screenshot 5.png" alt="">
+                    <img src="Image/The war pillow fight Screenshot 6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="steampunk-island">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Steampunk island.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Steampunk Island</span>
+
+            <span class="description">
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">3D Artist, Enivronment</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Ng Kheng Shin</span>
+                        <span class="position">3D Artist</span>
+                    </div>
+                    <a href="https://creeperxd.itch.io/">Itch.io</a>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Yee Jian Chuan</span>
+                        <span class="position">3D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Elvin Sim</span>
+                        <span class="position">3D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Yap Yong Kang</span>
+                        <span class="position">3D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Mohammand Osama</span>
+                        <span class="position">3D Artist</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Law Tuck Fai</span>
+                        <span class="position">3D Artist, Environment</span>
+                    </div>
+                    <a href="https://www.linkedin.com/in/lew-tuck-fai-077722324/">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/1j0D6W7W3g-hVQd2yojE_NZo7lNiTHLtX/view?usp=drive_link">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unreal Engine.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Steampunk island Screenshot 1.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 2.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 3.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 4.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 5.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 6.png" alt="">
+                    <img src="Image/Steampunk island Screenshot 7.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="postcard">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Postcard mock up.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Postcard</span>
+
+            <span class="description">
+                A postcard design in my Year 1 Semester 1,  
+                Topic about the video game - Octopath Traveller.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Photoshop.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel" id="railway-station">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Malaysia Railway Station Render.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Postcard</span>
+
+            <span class="description">
+                 A 3D Modelling craft by myself, refers to Malaysia, Selangor Historical Railway Station.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">3D Genelist</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/3DsMax.png" alt="">
+                    <img src="Icon/Blender.png" alt="">
+                    <img src="Icon/Substance.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Malaysia Railway Station Render 1.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render 2.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render 3.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render with Wireframe 1.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render with Wireframe 2.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render with Wireframe 3.png" alt="">
+                    <img src="Image/Malaysia Railway Station Render with Wireframe 4.png" alt="">
+                    <img src="Image/Malaysia Railway Station Solid.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="StudyPal">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Figma StudyPal.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">StudyPal</span>
+
+            <span class="description">
+                A StudyPal usability mobile application design, project done by group.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">App Designer</span>
+                    </div>
+                </div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Sean Thon Han Ping</span>
+                        <span class="position">Survey Proposer</span>
+                    </div>
+                </div>
+
+                 <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Li Xinan</span>
+                        <span class="position">Proposer</span>
+                    </div>
+                    <a href="http://linkedin.com/in/xinan-li-b370273b6">LinkedIn</a>
+                </div>
+                 <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Ng Kheng Shin</span>
+                        <span class="position">Tester</span>
+                    </div>
+                    <a href="https://creeperxd.itch.io/">Itch.io</a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://www.figma.com/design/eT2L9KxwEdtH1iZnoZV249/Untitled?node-id=0-1&t=Fqi7m4sWyZEpyTYC-1">
+                        <span>Figma</span>
+                        <img src="Icon/Figma.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Figma.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Figma StudyPal Screenshot 1.png" alt="">
+                    <img src="Image/Figma StudyPal Screenshot 2.png" alt="">
+                    <img src="Image/Figma StudyPal Screenshot 3.png" alt="">
+                    <img src="Image/Figma StudyPal Screenshot 4.png" alt="">
+                    <img src="Image/Figma StudyPal Screenshot 5.png" alt="">
+                    <img src="Image/Figma StudyPal Screenshot 6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="cyberpunk-railway">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Cyberpunk Railway - Personal Part.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Cyberpunk Railway Station - Individual Video Chip</span>
+
+            <span class="description">
+                The group assignment project but individual video clips. One 3D rendered video.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">3D Genelist</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/1Z7K8QO0bUzm5E_aKfhadCEB94pydCetb/view?usp=drive_link">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/3DsMax.png" alt="">
+                    <img src="Icon/Substance.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Cyberpunk Railway - Personal Part Screenshot 1.png" alt="">
+                    <img src="Image/Cyberpunk Railway - Personal Part Screenshot 2.png" alt="">
+                    <img src="Image/Cyberpunk Railway - Personal Part Screenshot 3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="TRPG">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/TRPG Toolkit - In Progress.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">TRPG Toolkit - In Progress</span>
+
+            <span class="description">
+                A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
+                Project 2D art - Tactic Orge video game copyright by Square Enix. 
+                This project still in progress.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">Programmer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Source</div>
+                <div class="panel-area-source">
+                    <a href="https://drive.google.com/file/d/1ClaTPzSVq30dQOIRYz50U9cMCI8BFM0U/view?usp=drive_link">
+                        <span>Video</span>
+                        <img src="Icon/Google Drive.png" alt="">
+                    </a>
+                    <a href="https://github.com/HooWoonSoon/Tatical3DRPG">
+                        <span>Github</span>
+                        <img src="Icon/Github Logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/Unity.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 1.png" alt="">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 2.png" alt="">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 3.png" alt="">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 4.png" alt="">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 5.png" alt="">
+                    <img src="Image/TRPG Toolkit - In Progress Screenshot 6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" id="steampunk-machine">
+        <button class="close-btn">x</button>
+        <div class="main-area">
+            <img src="Image/Steampunk machine - props machine.png" alt="">
+        </div>
+        <div class="content">
+            <span class="title">Steampunk Machine - Props Machine</span>
+
+            <span class="description">
+                The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
+                modelled by me.
+            </span>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Project Contributor</div>
+
+                <div class="contributor-info">
+                    <div class="contributor-item">
+                        <span class="name">Hoo Woon Soon</span>
+                        <span class="position">3D Genelist</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Software</div>
+                <div class="panel-area-software">
+                    <img src="Icon/3DsMax.png" alt="">
+                    <img src="Icon/Substance.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">UV Mapping</div>
+                <div class="panel-area-uv">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 1.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 2.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 3.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 4.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 5.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 6.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Screenshot 7.png" alt="">
+                </div>
+            </div>
+
+            <div class="panel-area">
+                <div class="panel-area-title">Screenshot</div>
+                <div class="panel-area-screenshot">
+                    <img src="Image/Steampunk machine - props machine Screenshot Front.png" alt="">
+                    <img src="Image/Steampunk machine - props machine Screenshot Left.png" alt="">
+                    <img src="Image/Steampunk machine - props machine Path Racing.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV.png" alt="">
+                    <img src="Image/Steampunk machine - props machine UV Wireframe.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="image-viewer" id="imageViewer">
+    <button class="close">x</button>
+
+    <button class="viewer-btn prev">❮</button>
+
+    <img id="viewerImg">
+
+    <button class="viewer-btn next">❯</button>
 </div>
 
 <footer>
@@ -360,5 +1295,6 @@
 <script src="JavaScript/script.js"></script>
 <script src="JavaScript/filter.js"></script>
 <script src="JavaScript/popup.js"></script>
+<script src="JavaScript/viewer.js"></script>
 </body>
 </html>

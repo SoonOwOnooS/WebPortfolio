@@ -1,0 +1,54 @@
+.image-viewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+    z-index:999;
+}
+
+.image-viewer.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.image-viewer img{
+    max-width:90%;
+    max-height:90%;
+    object-fit:contain;
+}
+
+.viewer-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:40px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.image-viewer .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev{
+    left:40px;
+}
+
+.next{
+    right:40px;
+}

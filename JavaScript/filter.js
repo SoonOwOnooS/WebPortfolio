@@ -1,24 +1,61 @@
 const projects = document.querySelectorAll(".port-box");
 const categoryButtons = document.querySelectorAll(".category-item");
-const filterButtons = document.querySelectorAll(".filter-button button");
+const filterButtonContainer = document.querySelector(".filter-button");
+const radios = document.querySelectorAll('.filter-person-or-group input[type="radio"]')
 
-let currentType = "technical";
-let currentTime = "all";
+let currentCategory = "technical";
+let currentType = "all";
+let currentId = "group";
+
+const buttonSets = {
+    technical: `
+    <button data-type="all" class="btn"><span>All</span></button>
+    <button data-type="unity" class="btn"><span>Unity</span></button>
+    <button data-type="unreal" class="btn"><span>Unreal</span></button>
+    `,
+    design: `
+    <button data-type="all" class="btn"><span>All</span></button>
+    <button data-type="2d" class="btn"><span>2D</span></button>
+    <button data-type="3d" class="btn"><span>3D</span></button>
+    `
+};
+
+function changeCategroy(category){
+    filterButtonContainer.innerHTML = buttonSets[category];
+
+    const newButtons = document.querySelectorAll(".filter-button button");
+
+    newButtons.forEach(btn=>{
+        btn.addEventListener("click",()=>{
+
+            newButtons.forEach(b=>{
+                b.querySelector("span").classList.remove("active");
+            });
+
+            btn.querySelector("span").classList.add("active");
+
+            currentType = btn.dataset.type;
+            filterProjects();
+        });
+    });
+}
 
 function filterProjects(){
 
     projects.forEach(project => {
 
+        const category = project.dataset.category;
         const type = project.dataset.type;
-        const time = project.dataset.time;
+        const id = project.id;
 
-        if(type !== currentType){
+        if(category !== currentCategory){
             project.classList.add("hide");
             project.classList.remove("show");
             return;
         }
 
-        if(currentTime === "all" || time === currentTime){
+        if((currentType === "all" || type === currentType) &&
+         id === currentId) {
             project.classList.remove("hide")
             project.classList.add("show")
         }
@@ -31,24 +68,19 @@ function filterProjects(){
 
 categoryButtons.forEach(btn=>{
     btn.addEventListener("click",()=>{
-        currentType = btn.dataset.type;
+        currentCategory = btn.dataset.category;
+        changeCategroy(currentCategory)
         filterProjects();
     });
 });
 
-filterButtons.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-
-        filterButtons.forEach(b=>{
-            b.querySelector("span").classList.remove("active");
-        })
-
-        btn.querySelector("span").classList.add("active");
-
-        currentTime = btn.dataset.time;
+radios.forEach(radio => {
+    radio.addEventListener("change",()=>{
+        currentId = radio.id;
         filterProjects();
-    });
-});
+    })
+})
 
-document.querySelector('.filter-button button[data-time="all"] span').classList.add("active");
+changeCategroy(currentCategory)
 filterProjects();
+document.querySelector('.filter-button button[data-type="all"] span').classList.add("active");

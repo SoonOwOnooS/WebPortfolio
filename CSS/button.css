@@ -1,3 +1,57 @@
+.buttonIcon {
+    width: 100px;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    transform: translateX(0%) translateY(-10%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    color: #fff;
+    background: var(--transparency-background-color);
+    border-radius: 0.3em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    padding: 0.1em 1em;
+    border: #fff 1px solid;
+    white-space: nowrap;
+}
+
+.buttonIcon:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.buttonIcon:hover .tooltip {
+    top: -100%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0%) translateY(0);
+}
+
+.Icon {
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    object-fit: contain;
+    display: block;
+}
+
 .submitButton {
     background-color: var(--button-color);
     align-items: flex-start;
