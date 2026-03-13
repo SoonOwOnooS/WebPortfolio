@@ -42,7 +42,10 @@
                 <img class="Icon" src="Icon/LinkedIn Logo.png" alt="">
             </a><br>
             <div class="button-box download">
-                <a href="#" class="button">Download Portfolio</a>
+                <a href="#" class="button">
+                    <span>Download Portfolio</span>
+                </a>
+                <span class="tooltip">Invalid</span>
             </div>
         </div>
     </section>
@@ -83,16 +86,17 @@
 
         <section class="section-introduction">    
             <div class="introduction-box">
-                    <svg class="icon education" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                    fill="white" viewBox="0 0 24 24" >
-                    <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
-                    <path d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z"></path>
-                    </svg>
+                <svg class="icon education" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                fill="white" viewBox="0 0 24 24" >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z"></path>
+                </svg>
 
-                    <h3>Education</h3>
-                    <p>I studying in Asia Pacific University major in becholor's degree of Game Development</p>
-                    <div class="button-box read-more">
+                <h3>Education</h3>
+                <p>I studying in Asia Pacific University major in becholor's degree of Game Development</p>
+                <div class="button-box read-more">
                     <a href="#" class="button">Read More</a>
+                    <span class="tooltip">Invalid</span>
                 </div>
             </div>         
             <div class="introduction-box">
@@ -106,6 +110,7 @@
                 <p>I made 6 game demo developed by Unity3D and Unreal Engine</p>
                 <div class="button-box read-more">
                     <a href="#" class="button">Read More</a>
+                    <span class="tooltip">Invalid</span>
                 </div>
             </div>                   
         </section>
@@ -272,12 +277,17 @@
             </div>
 
             <div class="filter-person-or-group">
+                <input type="radio" name="type" id="all" checked>
+                <label class="radio" for="all">
+                    <span class="name">All</span>
+                </label>
+
                 <input type="radio" name="type" id="person">
                 <label class="radio" for="person">
                     <span class="name">Person</span>
                 </label>
 
-                <input type="radio" name="type" id="group" checked>
+                <input type="radio" name="type" id="group">
                 <label class="radio" for="group">
                     <span class="name">Group</span>
                 </label>

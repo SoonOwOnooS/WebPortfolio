@@ -5,7 +5,7 @@ const radios = document.querySelectorAll('.filter-person-or-group input[type="ra
 
 let currentCategory = "technical";
 let currentType = "all";
-let currentId = "group";
+let currentId = "all";
 
 const buttonSets = {
     technical: `
@@ -54,8 +54,8 @@ function filterProjects(){
             return;
         }
 
-        if((currentType === "all" || type === currentType) &&
-         id === currentId) {
+        if((currentType === "all" || currentType === type) &&
+         (currentId === "all" || currentId === id)) {
             project.classList.remove("hide")
             project.classList.add("show")
         }
@@ -73,6 +73,7 @@ categoryButtons.forEach(btn=>{
         filterProjects();
     });
 });
+
 
 radios.forEach(radio => {
     radio.addEventListener("change",()=>{
