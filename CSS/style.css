@@ -239,6 +239,7 @@ nav a:hover {
     font-weight: 600;
     display: flex;
     flex-wrap: wrap;
+    gap: 0.3rem;
 }
 
 .changeText h3 {
@@ -283,25 +284,17 @@ nav a:hover {
 }
 
 .repo {
-    position: relative;
-    text-decoration: none;
-    margin: 0 5px 0 0;
-    padding: 5px;
-    color: whitesmoke;
-    background-color: #528ddb42;
-    font-size: 15px;
-    box-shadow: #fff 0 1px 1px;
-}
-
-.repo{
+    display: inline-block;
     text-decoration:none;
     margin-right:5px;
+    margin-bottom: 5px;
     padding:4px 10px;
     color:white;
     background:#528ddb42;
     font-size:14px;
     border:1px solid rgba(160,242,230,0.5);
     transition:0.2s;
+    box-shadow: #fff 0 1px 1px;
 }
 
 .repo:hover{
@@ -665,6 +658,7 @@ nav a:hover {
 .filter-button {
     margin-bottom: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1rem;
 }
@@ -679,7 +673,7 @@ nav a:hover {
     border-top: 0.08em solid white;
     border-left: 0.08em solid white;
     border-radius: 0.3em;
-    font-size: 10px;
+    font-size: 0.6rem;
     cursor: pointer;
 }
 
@@ -718,6 +712,19 @@ nav a:hover {
     transition: all 1s;
 }
 
+@media (max-width: 520px) {
+    .filter-button .btn{
+        width: 10em;
+        height: 3.2em;
+    }
+
+    .filter-button span {
+        width: 7.5em;
+        height: 2em;
+        font-size: 1.23em;
+    }
+}
+
 .filter-person-or-group {
     display: flex;
     position: relative;
@@ -754,6 +761,13 @@ nav a:hover {
     transition: 0.2s;
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 520px) {
+    .filter-person-or-group {
+        width: 280px;
+        height: 25px;
+    }
 }
 
 /* selected */
@@ -847,6 +861,16 @@ nav a:hover {
     justify-content: center;
     overflow: hidden;
 }
+
+@media (max-width: 520px) {
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+    .port-box {
+        max-height: auto;
+    }
+}
+
 
 .port-image img {
     width: 100%;
