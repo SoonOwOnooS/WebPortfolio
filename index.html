@@ -52,16 +52,22 @@
 
     <section class="home-introduction">
         <div class="aboutMe">
-            <div class="profileFrame">
-                <div class="profile">
-                    <img src="Image/无罪的莉莉娅2.png" alt="">
+            <div class="grid-left">
+                <div class="profileFrame">
+                    <div class="profile">
+                        <img src="" alt="">
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <p>Stats in Unemployee</p>
                 </div>
             </div>
 
             <div class="introduction">
                 <h1>Hi I'm Woon Soon</h1>
                 <div class="changeText">
-                    <h3>And I'm a passionate</h3>
+                    <h3>And I'm a passionate&nbsp;</h3>
                     <h3>
                         <span class="word">Programmer</span>
                         <span class="word">Game&nbsp;Developer</span>
@@ -69,14 +75,19 @@
                     </h3>
                 </div>
                 <p>I am honing my skills in game development, I learned:</p>
-                <div class="skills">Unity3D</div>
-                <div class="skills">C#</div>
-                <div class="skills">3dsMax</div>
-                <div class="skills">Substance Painter</div>
-                <div class="skills">Figma</div>
-                <div class="skills">Unreal Engine</div>
-                <div class="skills">Web</div>
-                <div class="skills">Github</div>
+                <div class="skill-container">
+                    <div class="skills">Unity3D</div>
+                    <div class="skills">C#</div>
+                    <div class="skills">3dsMax</div>
+                    <div class="skills">Substance Painter</div>
+                    <div class="skills">Figma</div>
+                    <div class="skills">Unreal Engine</div>
+                    <div class="skills">Web</div>
+                    <div class="skills">Github</div>
+                </div>
+                <div id ="repos">
+                    <p id="githubStats">Loading...</p>
+                </div>
             </div>
         </div>
 
@@ -250,224 +261,224 @@
         </section> 
     </section>
     
-<section id="portfolio" class="portfolio">
-    <div class="main-text">
-        <h2>Portfolio</h2>
-    </div>
-    
-    <div class="category">
-        <div class ="category-item technical" data-category="technical">
-            <div class="item-content">
-                <h2>Technical Projects</h2>
-                <p>The technical projects I have worked on game development, Unity and Unreal Engine.</p>
-            </div>
+    <section id="portfolio" class="portfolio">
+        <div class="main-text">
+            <h2>Portfolio</h2>
         </div>
-
-        <div class ="category-item design" data-category="design">
-            <div class="item-content">
-                <h2>Design Works</h2>
-                <p>The design works I have created include digital paintings, 3D modeling, figma and poster.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="flex-container">
-        <div class="filter-option">
-            <div class="filter-button">
-            </div>
-
-            <div class="filter-person-or-group">
-                <input type="radio" name="type" id="all" checked>
-                <label class="radio" for="all">
-                    <span class="name">All</span>
-                </label>
-
-                <input type="radio" name="type" id="person">
-                <label class="radio" for="person">
-                    <span class="name">Person</span>
-                </label>
-
-                <input type="radio" name="type" id="group">
-                <label class="radio" for="group">
-                    <span class="name">Group</span>
-                </label>
-
-                <span class="slider"></span>
-            </div>
-        </div>
-
-        <div class="portfolio-gallery">
-            <div class="port-box" data-category="technical" data-type="unity" id="group">
-                <div class="port-image">
-                    <img src="Image/Code of Defiance.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Code of Defiance</h3>
-                    <p>
-                        A game demo by a team of students, 
-                        a game demo about an AI rescuing a mentally devastated man. 
-                        He is seen as having a connection to the war enterprise.
-                    </p>
-                    <button class="button-panel" data-target="code-of-defiance">Read More</button>
+        
+        <div class="category">
+            <div class ="category-item technical" data-category="technical">
+                <div class="item-content">
+                    <h2>Technical Projects</h2>
+                    <p>The technical projects I have worked on game development, Unity and Unreal Engine.</p>
                 </div>
             </div>
 
-            <div class="port-box" data-category="technical" data-type="unity" id="group">
-                <div class="port-image">
-                    <img src="Image/Zongzi Across Asia.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Zongzi Across Asia</h3>
-                    <p>
-                        A game demo by a team of students, 
-                        A restaurant simulation game surrendered by ASEAN theme,
-                        to promoting about food, culture and unity.
-                    </p>
-                    <button class="button-panel" data-target="zongzi-across-asia">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="technical" data-type="unreal" id="group">
-                <div class="port-image">
-                    <img src="Image/Dino Tales.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Dino Tales</h3>
-                    <p>
-                        A game demo by a team of students, Year2 sem 1 project,  
-                        3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
-                    </p>
-                    <button class="button-panel" data-target="dino-tales">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="technical" data-type="unity" id="group">
-                <div class="port-image">
-                    <img src="Image/The Witch Lament Poet.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>The Witch Lament Poet</h3>
-                    <p>
-                        A game demo by a team of students, Year2 sem 1 project,  
-                        A very disgraceful project, story about the last witch's doppelganger.
-                    </p>
-                    <button class="button-panel" data-target="the-witch-lament-poet">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="technical" data-type="unity" id="group">
-                <div class="port-image">
-                    <img src="Image/The war pillow fight.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>The War Pillow Fight</h3>
-                    <p>
-                        A game demo by a team of students, Year3 sem 1 project,  
-                        Multiplayer project, gameplay about player fight over the pillow and attack the designated opponent
-                    </p>
-                    <button class="button-panel" data-target="the-war-pillow-flight">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="technical" data-type="unity" id="person">
-                <div class="port-image">
-                    <img src="Image/TRPG Toolkit - In Progress.png" alt="">
-                </div>
-                <img src="Icon/maintance.png" alt="" class="icon">
-                <div class="port-content">
-                    <h3>TRPG Toolkit - In Progress</h3>
-                    <p>
-                        A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
-                        Project 2D art - Tactic Orge video game copyright by Square Enix. 
-                        This project still in progress.
-                    </p>
-                    <button class="button-panel" data-target="TRPG">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="design" data-type="3d" id="group">
-                <div class="port-image">
-                    <img src="Image/Steampunk island.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Steampunk Island</h3>
-                    <p>
-                        A game demo by a team of students, Year3 sem 1 project,  
-                        Unreal Engine asset crafting and environment placing group project.
-                    </p>
-                    <button class="button-panel" data-target="steampunk-island">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="design" data-type="2d" id="group">
-                <div class="port-image">
-                    <img src="Image/Figma StudyPal.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Figma - StudyPal</h3>
-                    <p>
-                        A StudyPal usability mobile application design, project done by group.
-                    </p>
-                    <button class="button-panel" data-target="StudyPal">Read More</button>
-                </div>
-            </div>
-
-           <div class="port-box" data-category="design" data-type="2d" id="person">
-                <div class="port-image">
-                    <img src="Image/Postcard mock up.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Postcard Mock Up</h3>
-                    <p>
-                        A postcard design in my Year 1 Semester 1,  
-                        Topic about the video game - Octopath Traveller.
-                    </p>
-                    <button class="button-panel" data-target="postcard">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="design" data-type="3d" id="person">
-                <div class="port-image">
-                    <img src="Image/Malaysia Railway Station Render.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Building Model - Malaysia Railway Station</h3>
-                    <p>
-                        A 3D Modelling craft by myself, refers to Malaysia, Selangor Historical Railway Station.
-                    </p>
-                    <button class="button-panel" data-target="railway-station">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="design" data-type="3d" id="person">
-                <div class="port-image">
-                    <img src="Image/Cyberpunk Railway - Personal Part.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Cyberpunk Railway - Personal Part</h3>
-                    <p>
-                        The group assignment project but individual video clips. One 3D rendered video.
-                    </p>
-                    <button class="button-panel" data-target="cyberpunk-railway">Read More</button>
-                </div>
-            </div>
-
-            <div class="port-box" data-category="design" data-type="3d" id="person">
-                <div class="port-image">
-                    <img src="Image/Steampunk machine - props machine.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3>Steampunk machine - Asset</h3>
-                    <p>
-                        The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
-                        modelled by me.
-                    </p>
-                    <button class="button-panel" data-target="steampunk-machine">Read More</button>
+            <div class ="category-item design" data-category="design">
+                <div class="item-content">
+                    <h2>Design Works</h2>
+                    <p>The design works I have created include digital paintings, 3D modeling, figma and poster.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        
+        <div class="flex-container">
+            <div class="filter-option">
+                <div class="filter-button">
+                </div>
+
+                <div class="filter-person-or-group">
+                    <input type="radio" name="type" id="all" checked>
+                    <label class="radio" for="all">
+                        <span class="name">All</span>
+                    </label>
+
+                    <input type="radio" name="type" id="person">
+                    <label class="radio" for="person">
+                        <span class="name">Person</span>
+                    </label>
+
+                    <input type="radio" name="type" id="group">
+                    <label class="radio" for="group">
+                        <span class="name">Group</span>
+                    </label>
+
+                    <span class="slider"></span>
+                </div>
+            </div>
+
+            <div class="portfolio-gallery">
+                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                    <div class="port-image">
+                        <img src="Image/Code of Defiance.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Code of Defiance</h3>
+                        <p>
+                            A game demo by a team of students, 
+                            a game demo about an AI rescuing a mentally devastated man. 
+                            He is seen as having a connection to the war enterprise.
+                        </p>
+                        <button class="button-panel" data-target="code-of-defiance">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                    <div class="port-image">
+                        <img src="Image/Zongzi Across Asia.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Zongzi Across Asia</h3>
+                        <p>
+                            A game demo by a team of students, 
+                            A restaurant simulation game surrendered by ASEAN theme,
+                            to promoting about food, culture and unity.
+                        </p>
+                        <button class="button-panel" data-target="zongzi-across-asia">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="technical" data-type="unreal" id="group">
+                    <div class="port-image">
+                        <img src="Image/Dino Tales.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Dino Tales</h3>
+                        <p>
+                            A game demo by a team of students, Year2 sem 1 project,  
+                            3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
+                        </p>
+                        <button class="button-panel" data-target="dino-tales">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                    <div class="port-image">
+                        <img src="Image/The Witch Lament Poet.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>The Witch Lament Poet</h3>
+                        <p>
+                            A game demo by a team of students, Year2 sem 1 project,  
+                            A very disgraceful project, story about the last witch's doppelganger.
+                        </p>
+                        <button class="button-panel" data-target="the-witch-lament-poet">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                    <div class="port-image">
+                        <img src="Image/The war pillow fight.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>The War Pillow Fight</h3>
+                        <p>
+                            A game demo by a team of students, Year3 sem 1 project,  
+                            Multiplayer project, gameplay about player fight over the pillow and attack the designated opponent
+                        </p>
+                        <button class="button-panel" data-target="the-war-pillow-flight">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="technical" data-type="unity" id="person">
+                    <div class="port-image">
+                        <img src="Image/TRPG Toolkit - In Progress.png" alt="">
+                    </div>
+                    <img src="Icon/maintance.png" alt="" class="icon">
+                    <div class="port-content">
+                        <h3>TRPG Toolkit - In Progress</h3>
+                        <p>
+                            A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
+                            Project 2D art - Tactic Orge video game copyright by Square Enix. 
+                            This project still in progress.
+                        </p>
+                        <button class="button-panel" data-target="TRPG">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="design" data-type="3d" id="group">
+                    <div class="port-image">
+                        <img src="Image/Steampunk island.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Steampunk Island</h3>
+                        <p>
+                            A game demo by a team of students, Year3 sem 1 project,  
+                            Unreal Engine asset crafting and environment placing group project.
+                        </p>
+                        <button class="button-panel" data-target="steampunk-island">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="design" data-type="2d" id="group">
+                    <div class="port-image">
+                        <img src="Image/Figma StudyPal.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Figma - StudyPal</h3>
+                        <p>
+                            A StudyPal usability mobile application design, project done by group.
+                        </p>
+                        <button class="button-panel" data-target="StudyPal">Read More</button>
+                    </div>
+                </div>
+
+            <div class="port-box" data-category="design" data-type="2d" id="person">
+                    <div class="port-image">
+                        <img src="Image/Postcard mock up.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Postcard Mock Up</h3>
+                        <p>
+                            A postcard design in my Year 1 Semester 1,  
+                            Topic about the video game - Octopath Traveller.
+                        </p>
+                        <button class="button-panel" data-target="postcard">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="design" data-type="3d" id="person">
+                    <div class="port-image">
+                        <img src="Image/Malaysia Railway Station Render.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Building Model - Malaysia Railway Station</h3>
+                        <p>
+                            A 3D Modelling craft by myself, refers to Malaysia, Selangor Historical Railway Station.
+                        </p>
+                        <button class="button-panel" data-target="railway-station">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="design" data-type="3d" id="person">
+                    <div class="port-image">
+                        <img src="Image/Cyberpunk Railway - Personal Part.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Cyberpunk Railway - Personal Part</h3>
+                        <p>
+                            The group assignment project but individual video clips. One 3D rendered video.
+                        </p>
+                        <button class="button-panel" data-target="cyberpunk-railway">Read More</button>
+                    </div>
+                </div>
+
+                <div class="port-box" data-category="design" data-type="3d" id="person">
+                    <div class="port-image">
+                        <img src="Image/Steampunk machine - props machine.png" alt="">
+                    </div>
+                    <div class="port-content">
+                        <h3>Steampunk machine - Asset</h3>
+                        <p>
+                            The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
+                            modelled by me.
+                        </p>
+                        <button class="button-panel" data-target="steampunk-machine">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <div class="container-wrapper">
     <div class="contactForm">
@@ -997,7 +1008,7 @@
             <img src="Image/Malaysia Railway Station Render.png" alt="">
         </div>
         <div class="content">
-            <span class="title">Postcard</span>
+            <span class="title">Malaysia Railway Station Building</span>
 
             <span class="description">
                  A 3D Modelling craft by myself, refers to Malaysia, Selangor Historical Railway Station.
@@ -1066,6 +1077,7 @@
                         <span class="name">Sean Thon Han Ping</span>
                         <span class="position">Survey Proposer</span>
                     </div>
+                    <a href="https://www.linkedin.com/in/sean-thoo-han-ping">LinkedIn</a>
                 </div>
 
                  <div class="contributor-info">
@@ -1306,5 +1318,7 @@
 <script src="JavaScript/filter.js"></script>
 <script src="JavaScript/popup.js"></script>
 <script src="JavaScript/viewer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+<script src="JavaScript/githubData.js"></script>
 </body>
 </html>

@@ -9,12 +9,13 @@
 }
 
 .home-introduction {
-    margin: 10px 20px;
-    border-bottom: 2px solid rgb(160, 242, 230);
-    border-right: 2px solid rgb(160, 242, 230);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    box-shadow: 0 0 32px var(--button-hover-color);
+    background: linear-gradient(160deg, rgba(208, 253, 255, 0.05), rgba(255, 238, 213, 0.05));
+    margin: 30px 50px;
+    border-bottom: 1px solid rgb(160, 242, 230);
+    border-right: 1px solid rgb(160, 242, 230);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow: 5px 5px rgb(143, 153, 179);
 }
 
 .logo {
@@ -76,10 +77,17 @@ nav a:hover {
     text-decoration: none;
 }
 
+.aboutMe .grid-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .profileFrame {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
     background: #596779;
     border-bottom: 2px solid rgb(160, 242, 230);
     border-right: 2px solid rgb(160, 242, 230);
@@ -96,9 +104,9 @@ nav a:hover {
 .profileFrame::before {
   content: '';
   position: absolute;
-  width: 100px;
-  background-image: linear-gradient(180deg, rgb(57,162,152), rgb(160, 242, 230));
-  height: 130%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgb(59, 99, 130), rgb(138, 255, 243));
   animation: rotBGimg 3s linear infinite;
   transition: all 0.2s linear;
 }
@@ -121,16 +129,49 @@ nav a:hover {
     border-radius: 50%; 
 }  
 
+.profile {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+}
+
+.chat-box{
+    position:absolute;
+    top:225px;
+    border-bottom: 2px solid rgb(160, 242, 230);
+    border-right: 2px solid rgb(160, 242, 230);
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    background: linear-gradient(160deg, rgba(208, 253, 255, 0.4), rgba(255, 238, 213, 0.4));
+    backdrop-filter:blur(6px);
+    font-weight: 600;
+    
+    padding:10px 14px;
+    border-radius:8px;
+
+    max-width:220px;
+
+    box-shadow:0 0 10px rgba(160,242,230,0.2);
+    z-index: 2;
+}
+
+.chat-box p {
+    display: inline;
+    text-shadow: 2px 2px 1px var(--button-hover-color-text);
 }
 
 .aboutMe {
     background-color: var(--transparency-background-color);
     color: white;
-    padding: 20px 200px ;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
@@ -157,31 +198,47 @@ nav a:hover {
 }
 
 .introduction h1{
-    font-weight: 700;
+    margin-block-start: 0px;
+    margin-block-end: 0.2em;
 }
 
 .introduction p {
     color: gainsboro;
-    font-size: 20px;
+    font-size: 16px;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
 }
+
+.skill-container {
+    max-width: 560px;
+    padding: 7px 10px;
+    background-color: #07182e42;
+    box-shadow: #fff 0 1px 1px;
+    border-radius: 10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+}
+
 
 .skills {
     display: inline-block;
-    margin: 2px 0px;
-    padding: 8px 15px;
-    font-weight: 700;
+    padding: 5px 10px;
+    font-weight: 600;
     background: var(--button-color);
     color: var(--button-color-text);
-    border-radius: 0.5rem;
-    border-bottom: 2px solid rgb(160, 242, 230);
+    border-radius: 0.2rem;
+    border-bottom: 1px solid rgb(160, 242, 230);
     border-right: 2px solid rgb(160, 242, 230);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
 }
 
 .changeText {
     font-size: 1.5rem;
     font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .changeText h3 {
@@ -221,16 +278,47 @@ nav a:hover {
     transform: rotateX(-90deg);
 }
 
+#githubStats {
+    margin-top: 0.5rem;
+}
+
+.repo {
+    position: relative;
+    text-decoration: none;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    color: whitesmoke;
+    background-color: #528ddb42;
+    font-size: 15px;
+    box-shadow: #fff 0 1px 1px;
+}
+
+.repo{
+    text-decoration:none;
+    margin-right:5px;
+    padding:4px 10px;
+    color:white;
+    background:#528ddb42;
+    font-size:14px;
+    border:1px solid rgba(160,242,230,0.5);
+    transition:0.2s;
+}
+
+.repo:hover{
+    background:rgb(160,242,230);
+    color:black;
+}
+
 .contactForm {
-    background-color: rgba(208, 253, 255, 0.1);
+    background: linear-gradient(160deg, rgba(208, 253, 255, 0.05), rgba(255, 238, 213, 0.05));
     border-radius: 4px;
-    border-bottom: 2px solid rgb(160, 242, 230);
-    border-right: 2px solid rgb(160, 242, 230);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    margin: 10px;
+    border-bottom: 1px solid rgb(160, 242, 230);
+    border-right: 1px solid rgb(160, 242, 230);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow: 5px 5px rgb(143, 175, 179);
+    margin: 50px;
     padding: 2px;
-    width: 100%;
     max-width: 520px;
 }
 
@@ -242,7 +330,7 @@ nav a:hover {
 }
 
 .contactForm h2 {
-    color:  rgb(160, 242, 230);
+    color:  white;
     text-align: center;
     margin: 5px 0px 15px;
     padding: 5px 0px 10px;
@@ -253,7 +341,7 @@ nav a:hover {
 
 .contactForm label {
     margin: 0px 10px;
-    color:  rgb(160, 242, 230);
+    color:  white;
     position: inherit;
     font-weight: bold;
 }
@@ -494,11 +582,20 @@ nav a:hover {
 }
 
 .portfolio {
-    margin: 20px 20px;
-    border-bottom: 2px solid rgb(160, 242, 230);
-    border-right: 2px solid rgb(160, 242, 230);
-    border-top: 2px solid white;
-    border-left: 2px solid white;
+    margin: 30px 50px;
+    background: linear-gradient(160deg, rgba(208, 253, 255, 0.05), rgba(255, 238, 213, 0.05));
+    border-bottom: 1px solid rgb(160, 242, 230);
+    border-right: 1px solid rgb(160, 242, 230);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow: 5px 5px rgb(143, 153, 179);
+}
+
+@media (max-width: 768px) {
+    .home-introduction,
+    .portfolio {
+        margin: 30px 30px;
+    }
 }
 
 .category {
@@ -560,8 +657,9 @@ nav a:hover {
 }
 
 .filter-option {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .filter-button {
@@ -626,6 +724,7 @@ nav a:hover {
     width: 300px;
     height: 30px;
     padding: 2px;
+    margin-bottom: 0.5rem;
 
     border-radius: 0.3rem;
     border-bottom: 1px solid rgb(160, 242, 230);
@@ -803,6 +902,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .contactForm {
+        margin: 30px 30px;
         padding: 18px;
         max-width: 100%;
         text-align: left;
