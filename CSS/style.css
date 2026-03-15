@@ -730,9 +730,9 @@ nav a:hover {
     display: flex;
     position: relative;
     width: 300px;
-    height: 30px;
+    height: clamp(1.5rem, 2vw, 2rem);
     padding: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     border-radius: 0.3rem;
     border-bottom: 1px solid rgb(160, 242, 230);
@@ -756,19 +756,13 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     cursor: pointer;
     color: white;
     border-radius: 0.2rem;
     transition: 0.2s;
     position: relative;
     z-index: 2;
-}
-
-@media (max-width: 520px) {
-    .filter-person-or-group {
-        width: 280px;
-        height: 25px;
-    }
 }
 
 /* selected */
@@ -906,7 +900,7 @@ nav a:hover {
 
 .port-content h3 {
     margin: clamp(0em, 1vw, 1em);
-    font-size: clamp(1rem, 1.2rem, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 600;
     color: white;
 }

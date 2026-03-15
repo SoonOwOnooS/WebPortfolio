@@ -124,7 +124,8 @@
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
     width: 180px;
-    height: 20px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    height: auto;
     background: var(--button-color);
     border-bottom: 2px solid rgb(160, 242, 230);
     border-right: 2px solid rgb(160, 242, 230);

@@ -73,7 +73,7 @@
 }
 
 .panel .content {
-    padding:10px 30px 10px;
+    padding: clamp(5px, 2vw, 10px) clamp(10px, 2vw, 30px) clamp(5px, 2vw, 10px);
     overflow-y:auto;
     flex:1;
     display:flex;
@@ -97,6 +97,7 @@
 }
 
 .panel .content .description {
+    margin: 0;
     font-size: 16px;
     padding: 0 1rem 1rem;
 }
