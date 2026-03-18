@@ -532,39 +532,39 @@ nav a:hover {
 }
 
 .skill-bar .bar .html {
-    width: 20%;
+    width: 25%;
     animation: html 1s forwards;
 }
 @keyframes html {
     from { width: 0; }
-    to { width: 20%; }
+    to { width: 25%; }
 }
 
 .skill-bar .bar .css {
-    width: 20%;
+    width: 25%;
     animation: css 1s forwards;
 }
 @keyframes css {
     from { width: 0; }
-    to { width: 20%; }
+    to { width: 25%; }
 }
 
 .skill-bar .bar .javascript {
-    width: 5%;
+    width: 10%;
     animation: javascript 0.5s forwards;
 }
 @keyframes javascript {
     from { width: 0; }
-    to { width: 5%; }
+    to { width: 10%; }
 }
 
 .skill-bar .bar .photoshop {
-    width: 25%;
+    width: 30%;
     animation: photoshop 1s forwards;
 }
 @keyframes photoshop {
     from { width: 0; }
-    to { width: 25%; }
+    to { width: 30%; }
 }
 
 .skill-bar .bar .after-effect {
