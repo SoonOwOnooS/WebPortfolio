@@ -1,5 +1,5 @@
 const APIURL = 'https://api.github.com/users/';
-const username = "hoowoonsoon";
+const username = "SoonOwOnooS";
 
 async function getGithubProfile(){
     const response = await fetch(APIURL + username);
