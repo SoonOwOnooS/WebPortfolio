@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woon Soon Portfolio Website</title>
-    <link rel="stylesheet" href="CSS/background.css">
-    <link rel="stylesheet" href="CSS/button.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/pop-up.css">
-    <link rel="stylesheet" href="CSS/viewer.css">
+    <link rel="stylesheet" href="CSS/background.css?v=20261017local">
+    <link rel="stylesheet" href="CSS/button.css?v=20261017local">
+    <link rel="stylesheet" href="CSS/style.css?v=20261017local">
+    <link rel="stylesheet" href="CSS/pop-up.css?v=20261017local">
+    <link rel="stylesheet" href="CSS/viewer.css?v=20261017local">
+    <link rel="stylesheet" href="CSS/local-fixes.css?v=20261017local">
+    <link rel="icon" href="Icon/Logo.png">
 </head>
 <body>
 
@@ -21,17 +23,21 @@
 
     <div class="headerContainer">
         <img class="logo" src="Icon/Logo.png" alt="Logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <div class="language-toolbar" role="group" aria-label="Language / 语言">
+            <button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
     </div>
 
-    <section class="billboard">
+    <section id="home" class="billboard">
         <div class="billboardContent">
-            <h1>Welcome to my <br>profolio</h1>
+            <h1>Welcome to my <br>portfolio</h1>
             <p>Discover my tech projects, art, and more.</p>
+            <div class="social-links" aria-label="Social links">
             <a href="https://github.com/SoonOwOnooS" class="buttonIcon">
                 <span>Github</span>
                 <img class="Icon" src="Icon/Github Logo.png" alt="">
@@ -40,15 +46,17 @@
                 <span>Bilibili</span>
                 <img class="Icon" src="Icon/Bilibili.png" alt="">
             </a>
+            </div>
         </div>
+        <a class="scroll-cue" href="#about"><span data-i18n="scroll.label">SCROLL</span><span aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="home-introduction">
+    <section id="about" class="home-introduction">
         <div class="aboutMe">
             <div class="grid-left">
                 <div class="profileFrame">
                     <div class="profile">
-                        <img src="" alt="">
+                        <img src="Icon/Logo.png" alt="Woon Soon profile">
                     </div>
                 </div>
 
@@ -88,7 +96,7 @@
             <h2>About Me</h2>
         </div>
 
-        <section class="section-introduction">    
+        <section class="section-introduction">
             <div class="introduction-box">
                 <svg class="icon education" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 fill="white" viewBox="0 0 24 24" >
@@ -98,13 +106,9 @@
 
                 <h3>Education</h3>
                 <p>I studyed in Asia Pacific University major in bachelor's degree of Game Development</p>
-                <div class="button-box">
-                    <a href="#" class="button">Read More</a>
-                    <span class="tooltip">Invalid</span>
-                </div>
-            </div>         
+            </div>
             <div class="introduction-box">
-                <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50"  
+                <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50"
                 fill="white" viewBox="0 0 24 24" >
                 <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                 <path d="M21 2h-5c-.3 0-.58.13-.77.37l-8.3 10.14L5 10.58V7.99H3v3c0 .27.11.52.29.71l3 3 .09.09-4.79 4.79 2.83 2.83 4.79-4.79.09.09 3 3c.19.19.44.29.71.29h3v-2h-2.59l-1.93-1.93 10.14-8.3c.23-.19.37-.47.37-.77V3c0-.55-.45-1-1-1m-1 5.53-9.93 8.13-1.72-1.72 8.13-9.93h3.53v3.53Z"></path>
@@ -112,11 +116,7 @@
 
                 <h3>Project</h3>
                 <p>I currently have 6 game demos developed in Unity3D and Unreal Engine</p>
-                <div class="button-box">
-                    <a href="#" class="button">Read More</a>
-                    <span class="tooltip">Invalid</span>
-                </div>
-            </div>                   
+            </div>
         </section>
 
         <div class="main-text">
@@ -126,7 +126,7 @@
         <section class="section-skills">
             <div class="game-development-skill">
                 <h3>Game Development</h3>
-                
+
                 <div class="skill-bar-content">
                     <div class="skill-bar">
                         <div class="info">
@@ -162,7 +162,7 @@
 
             <div class="art-3D-skill">
                 <h3>Art/3D</h3>
-                
+
                 <div class="skill-bar-content">
                     <div class="skill-bar">
                         <div class="info">
@@ -173,7 +173,7 @@
                             <span class="substance"></span>
                         </div>
                     </div>
-                
+
                     <div class="skill-bar">
                         <div class="info">
                             <span>3DsMax</span>
@@ -183,7 +183,7 @@
                             <span class="max"></span>
                         </div>
                     </div>
-                    
+
                     <div class="skill-bar">
                     <div class="info">
                         <span>Drawing</span>
@@ -198,7 +198,7 @@
 
             <div class="other-skill">
                 <h3>Other Skill</h3>
-                
+
                 <div class="skill-bar-content">
                     <div class="skill-bar">
                         <div class="info">
@@ -251,14 +251,14 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
     </section>
-    
+
     <section id="portfolio" class="portfolio">
         <div class="main-text">
             <h2>Portfolio</h2>
         </div>
-        
+
         <div class="category">
             <div class ="category-item technical" data-category="technical">
                 <div class="item-content">
@@ -274,7 +274,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="flex-container">
             <div class="filter-option">
                 <div class="filter-button">
@@ -301,29 +301,29 @@
             </div>
 
             <div class="portfolio-gallery">
-                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-box" data-category="technical" data-type="unity" data-team="group">
                     <div class="port-image">
                         <img src="Image/Code of Defiance.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Code of Defiance</h3>
                         <p>
-                            A game demo by a team of students, 
-                            a game demo about an AI rescuing a mentally devastated man. 
+                            A game demo by a team of students,
+                            a game demo about an AI rescuing a mentally devastated man.
                             He is seen as having a connection to the war enterprise.
                         </p>
                         <button class="button-panel" data-target="code-of-defiance">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-box" data-category="technical" data-type="unity" data-team="group">
                     <div class="port-image">
                         <img src="Image/Zongzi Across Asia.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Zongzi Across Asia</h3>
                         <p>
-                            A game demo by a team of students, 
+                            A game demo by a team of students,
                             A restaurant simulation game surrendered by ASEAN theme,
                             to promoting about food, culture and unity.
                         </p>
@@ -331,79 +331,77 @@
                     </div>
                 </div>
 
-                <div class="port-box" data-category="technical" data-type="unreal" id="group">
+                <div class="port-box" data-category="technical" data-type="unreal" data-team="group">
                     <div class="port-image">
                         <img src="Image/Dino Tales.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Dino Tales</h3>
                         <p>
-                            A game demo by a team of students, Year2 sem 1 project,  
+                            A game demo by a team of students, Year2 sem 1 project,
                             3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
                         </p>
                         <button class="button-panel" data-target="dino-tales">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-box" data-category="technical" data-type="unity" data-team="group">
                     <div class="port-image">
                         <img src="Image/The Witch Lament Poet.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>The Witch Lament Poet</h3>
                         <p>
-                            A game demo by a team of students, Year2 sem 1 project,  
+                            A game demo by a team of students, Year2 sem 1 project,
                             A very disgraceful project, story about the last witch's doppelganger.
                         </p>
                         <button class="button-panel" data-target="the-witch-lament-poet">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="technical" data-type="unity" id="group">
+                <div class="port-box" data-category="technical" data-type="unity" data-team="group">
                     <div class="port-image">
                         <img src="Image/The war pillow fight.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>The War Pillow Fight</h3>
                         <p>
-                            A game demo by a team of students, Year3 sem 1 project,  
+                            A game demo by a team of students, Year3 sem 1 project,
                             Multiplayer project, gameplay about player fight over the pillow and attack the designated opponent
                         </p>
                         <button class="button-panel" data-target="the-war-pillow-flight">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="technical" data-type="unity" id="person">
+                <div class="port-box" data-category="technical" data-type="unity" data-team="person">
                     <div class="port-image">
                         <img src="Image/TRPG Toolkit - In Progress.png" alt="">
                     </div>
-                    <img src="Icon/maintance.png" alt="" class="icon">
                     <div class="port-content">
-                        <h3>TRPG Toolkit - In Progress</h3>
+                        <h3>TRPG Toolkit</h3>
                         <p>
                             A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
-                            Project 2D art - Tactic Orge video game copyright by Square Enix. 
-                            This project still in progress.
+                            Project 2D art - Tactic Orge video game copyright by Square Enix.
                         </p>
                         <button class="button-panel" data-target="TRPG">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="3d" id="group">
+                <div class="port-box" data-category="design" data-type="3d" data-team="group">
                     <div class="port-image">
                         <img src="Image/Steampunk island.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Steampunk Island</h3>
                         <p>
-                            A game demo by a team of students, Year3 sem 1 project,  
+                            A game demo by a team of students, Year3 sem 1 project,
                             Unreal Engine asset crafting and environment placing group project.
                         </p>
                         <button class="button-panel" data-target="steampunk-island">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="2d" id="group">
+                <div class="port-box" data-category="design" data-type="2d" data-team="group">
                     <div class="port-image">
                         <img src="Image/Figma StudyPal.png" alt="">
                     </div>
@@ -416,7 +414,7 @@
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="2d" id="person">
+                <div class="port-box" data-category="design" data-type="2d" data-team="person">
                     <div class="port-image">
                         <img src="Image/无罪的莉莉娅2.jpg" alt="">
                     </div>
@@ -425,25 +423,24 @@
                         <p>
                             A drawing of a character named Liliya, character design and drawing by myself
                         </p>
-                        <button class="button-panel" data-target="Liliya">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="2d" id="person">
+                <div class="port-box" data-category="design" data-type="2d" data-team="person">
                     <div class="port-image">
                         <img src="Image/Postcard mock up.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Postcard Mock Up</h3>
                         <p>
-                            A postcard design in my Year 1 Semester 1,  
+                            A postcard design in my Year 1 Semester 1,
                             Topic about the video game - Octopath Traveller.
                         </p>
                         <button class="button-panel" data-target="postcard">Read More</button>
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-box" data-category="design" data-type="3d" data-team="person">
                     <div class="port-image">
                         <img src="Image/Malaysia Railway Station Render.png" alt="">
                     </div>
@@ -456,7 +453,7 @@
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-box" data-category="design" data-type="3d" data-team="person">
                     <div class="port-image">
                         <img src="Image/Cyberpunk Railway - Personal Part.png" alt="">
                     </div>
@@ -469,14 +466,14 @@
                     </div>
                 </div>
 
-                <div class="port-box" data-category="design" data-type="3d" id="person">
+                <div class="port-box" data-category="design" data-type="3d" data-team="person">
                     <div class="port-image">
                         <img src="Image/Steampunk machine - props machine.png" alt="">
                     </div>
                     <div class="port-content">
                         <h3>Steampunk machine - Asset</h3>
                         <p>
-                            The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
+                            The steampunk machine 3D modelling asset refer image by Praveen Kumar,
                             modelled by me.
                         </p>
                         <button class="button-panel" data-target="steampunk-machine">Read More</button>
@@ -487,7 +484,7 @@
     </section>
 
 <div class="container-wrapper">
-    <div class="contactForm">
+    <div id="contact" class="contactForm">
         <form action="https://formsubmit.co/hoowoonsoon12345@gmail.com" method="POST">
             <h2>Send Me Message</h2>
             <label for="name">Name:</label><br>
@@ -504,8 +501,8 @@
 </div>
 
 <div class="pop-up-background">
-    <div class="panel" id="code-of-defiance">
-        <button class="close-btn">x</button>
+    <div class="panel" id="code-of-defiance" role="dialog" aria-modal="true" aria-label="Code of Defiance" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Code of Defiance.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -513,12 +510,12 @@
             <span class="title">Code of Defiance</span>
 
             <span class="description">
-                A game demo by a team of students, 
-                a game demo about an AI rescuing a mentally devastated man. 
+                A game demo by a team of students,
+                a game demo about an AI rescuing a mentally devastated man.
                 He is seen as having a connection to the war enterprise.
             </span>
 
-            
+
             <div class="panel-area">
                 <div class="panel-area-title">Project Contributor</div>
 
@@ -585,8 +582,8 @@
         </div>
     </div>
 
-    <div class="panel" id="zongzi-across-asia">
-        <button class="close-btn">x</button>
+    <div class="panel" id="zongzi-across-asia" role="dialog" aria-modal="true" aria-label="Zongzi Across Asia" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Zongzi Across Asia.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -594,7 +591,7 @@
             <span class="title">Zongzi Across Asia</span>
 
             <span class="description">
-                A game demo by a team of students, 
+                A game demo by a team of students,
                 A restaurant simulation game surrendered by ASEAN theme,
                 to promoting about food, culture and unity.
             </span>
@@ -614,7 +611,6 @@
                         <span class="name">Darren Hon</span>
                         <span class="position">Level Design</span>
                     </div>
-                    <a href="#">LinkedIn</a>
                 </div>
 
                 <div class="contributor-info">
@@ -658,7 +654,7 @@
                 <div class="panel-area-title">Screenshot</div>
                 <div class="panel-area-screenshot">
                     <img src="Image/Zongzi Across Asia Screenshot 1.png" loading="lazy" alt="Lazy Load Image">
-                    <img src="Image/Zongzi Across Asia Screenshot 2.png" loading="lazy" alt="Lazy Load Image"">
+                    <img src="Image/Zongzi Across Asia Screenshot 2.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Zongzi Across Asia Screenshot 3.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Zongzi Across Asia Screenshot 4.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Zongzi Across Asia Screenshot 5.png" loading="lazy" alt="Lazy Load Image">
@@ -669,8 +665,8 @@
         </div>
     </div>
 
-    <div class="panel" id="dino-tales">
-        <button class="close-btn">x</button>
+    <div class="panel" id="dino-tales" role="dialog" aria-modal="true" aria-label="Dino Tales" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Dino Tales.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -678,7 +674,7 @@
             <span class="title">Dino Tales</span>
 
             <span class="description">
-                A game demo by a team of students, 
+                A game demo by a team of students,
                 3D-platformer game about a dino climbing the giant plant and platform produced from the magic bean.
             </span>
 
@@ -744,8 +740,8 @@
         </div>
     </div>
 
-    <div class="panel" id="the-witch-lament-poet">
-        <button class="close-btn">x</button>
+    <div class="panel" id="the-witch-lament-poet" role="dialog" aria-modal="true" aria-label="The Witch Lament Poel" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/The Witch Lament Poet.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -753,9 +749,9 @@
             <span class="title">The Witch Lament Poel</span>
 
             <span class="description">
-                A very disgraceful project, story about the last witch's doppelganger, 
-                Her birth also signifies that the witch entity and magic are teetering on the brink of collapse. 
-                Every doppelganger is purity but it don't meant their entity is a person who is easy to get along with. 
+                A very disgraceful project, story about the last witch's doppelganger,
+                Her birth also signifies that the witch entity and magic are teetering on the brink of collapse.
+                Every doppelganger is purity but it don't meant their entity is a person who is easy to get along with.
                 All of them for the entity, just a toys that can be destroyed and manipulate.
                 However it's luckly also unluckly, she haven't meet with her entity, but her birth is company of death.
             </span>
@@ -808,8 +804,8 @@
         </div>
     </div>
 
-    <div class="panel" id="the-war-pillow-flight">
-        <button class="close-btn">x</button>
+    <div class="panel" id="the-war-pillow-flight" role="dialog" aria-modal="true" aria-label="The War Pillow Fight" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/The war pillow fight.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -877,8 +873,8 @@
         </div>
     </div>
 
-    <div class="panel" id="steampunk-island">
-        <button class="close-btn">x</button>
+    <div class="panel" id="steampunk-island" role="dialog" aria-modal="true" aria-label="Steampunk Island" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Steampunk island.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -975,8 +971,8 @@
         </div>
     </div>
 
-    <div class="panel" id="postcard">
-        <button class="close-btn">x</button>
+    <div class="panel" id="postcard" role="dialog" aria-modal="true" aria-label="Postcard" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Postcard mock up.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -984,7 +980,7 @@
             <span class="title">Postcard</span>
 
             <span class="description">
-                A postcard design in my Year 1 Semester 1,  
+                A postcard design in my Year 1 Semester 1,
                 Topic about the video game - Octopath Traveller.
             </span>
 
@@ -1007,9 +1003,9 @@
             </div>
         </div>
     </div>
-    
-    <div class="panel" id="railway-station">
-        <button class="close-btn">x</button>
+
+    <div class="panel" id="railway-station" role="dialog" aria-modal="true" aria-label="Malaysia Railway Station Building" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Malaysia Railway Station Render.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -1056,8 +1052,8 @@
         </div>
     </div>
 
-    <div class="panel" id="StudyPal">
-        <button class="close-btn">x</button>
+    <div class="panel" id="StudyPal" role="dialog" aria-modal="true" aria-label="StudyPal" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Figma StudyPal.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -1122,7 +1118,7 @@
             <div class="panel-area">
                 <div class="panel-area-title">Screenshot</div>
                 <div class="panel-area-screenshot">
-                    <img src="Image/Figma StudyPal Screenshot 1.png" loading="lazy" alt="Lazy Load Image"">
+                    <img src="Image/Figma StudyPal Screenshot 1.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Figma StudyPal Screenshot 2.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Figma StudyPal Screenshot 3.png" loading="lazy" alt="Lazy Load Image">
                     <img src="Image/Figma StudyPal Screenshot 4.png" loading="lazy" alt="Lazy Load Image">
@@ -1133,8 +1129,8 @@
         </div>
     </div>
 
-    <div class="panel" id="cyberpunk-railway">
-        <button class="close-btn">x</button>
+    <div class="panel" id="cyberpunk-railway" role="dialog" aria-modal="true" aria-label="Cyberpunk Railway Station - Individual Video Chip" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Cyberpunk Railway - Personal Part.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -1185,18 +1181,17 @@
         </div>
     </div>
 
-    <div class="panel" id="TRPG">
-        <button class="close-btn">x</button>
+    <div class="panel" id="TRPG" role="dialog" aria-modal="true" aria-label="TRPG Toolkit" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/TRPG Toolkit - In Progress.png" loading="lazy" alt="Lazy Load Image">
         </div>
         <div class="content">
-            <span class="title">TRPG Toolkit - In Progress</span>
+            <span class="title">TRPG Toolkit</span>
 
             <span class="description">
                 A Unity IMGUI toolkit related to TRPG game mechanism but not fully following.
-                Project 2D art - Tactic Orge video game copyright by Square Enix. 
-                This project still in progress.
+                Project 2D art - Tactic Orge video game copyright by Square Enix.
             </span>
 
             <div class="panel-area">
@@ -1257,8 +1252,8 @@
         </div>
     </div>
 
-    <div class="panel" id="steampunk-machine">
-        <button class="close-btn">x</button>
+    <div class="panel" id="steampunk-machine" role="dialog" aria-modal="true" aria-label="Steampunk Machine - Props Machine" tabindex="-1">
+        <button type="button" class="close-btn" aria-label="Close project">×</button>
         <div class="main-area">
             <img src="Image/Steampunk machine - props machine.png" loading="lazy" alt="Lazy Load Image">
         </div>
@@ -1266,7 +1261,7 @@
             <span class="title">Steampunk Machine - Props Machine</span>
 
             <span class="description">
-                The steampunk machine 3D modelling asset refer image by Praveen Kumar, 
+                The steampunk machine 3D modelling asset refer image by Praveen Kumar,
                 modelled by me.
             </span>
 
@@ -1316,14 +1311,14 @@
     </div>
 </div>
 
-<div class="image-viewer" id="imageViewer">
-    <button class="close">x</button>
+<div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Project image viewer" aria-hidden="true">
+    <button type="button" class="close" aria-label="Close image viewer">×</button>
 
-    <button class="viewer-btn prev">❮</button>
+    <button type="button" class="viewer-btn prev" aria-label="Previous image">❮</button>
 
-    <img id="viewerImg">
+    <img id="viewerImg" alt="Expanded project image">
 
-    <button class="viewer-btn next">❯</button>
+    <button type="button" class="viewer-btn next" aria-label="Next image">❯</button>
 </div>
 
 <footer>
@@ -1332,11 +1327,11 @@
     </center>
 </footer>
 
-<script src="JavaScript/dynamicText.js"></script>
-<script src="JavaScript/filter.js"></script>
-<script src="JavaScript/popup.js"></script>
-<script src="JavaScript/viewer.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
-<script src="JavaScript/githubData.js"></script>
+<script src="JavaScript/i18n.js?v=20261017local"></script>
+<script src="JavaScript/dynamicText.js?v=20261017local"></script>
+<script src="JavaScript/filter.js?v=20261017local"></script>
+<script src="JavaScript/popup.js?v=20261017local"></script>
+<script src="JavaScript/viewer.js?v=20261017local"></script>
+<script src="JavaScript/githubData.js?v=20261017local"></script>
 </body>
 </html>

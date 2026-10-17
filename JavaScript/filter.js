@@ -1,87 +1,92 @@
-const projects = document.querySelectorAll(".port-box");
-const categoryButtons = document.querySelectorAll(".category-item");
-const filterButtonContainer = document.querySelector(".filter-button");
-const radios = document.querySelectorAll('.filter-person-or-group input[type="radio"]')
+(() => {
+    const projects = [...document.querySelectorAll(".port-box")];
+    const categoryButtons = [...document.querySelectorAll(".category-item")];
+    const filterButtonContainer = document.querySelector(".filter-button");
+    const radios = [...document.querySelectorAll('.filter-person-or-group input[type="radio"]')];
+    const gallery = document.querySelector(".portfolio-gallery");
+    if (!filterButtonContainer || !gallery) return;
 
-let currentCategory = "technical";
-let currentType = "all";
-let currentId = "all";
+    const filters = {
+        technical: [["all", "All"], ["unity", "Unity"], ["unreal", "Unreal"]],
+        design: [["all", "All"], ["2d", "2D"], ["3d", "3D"]]
+    };
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let currentCategory = "technical";
+    let currentType = "all";
+    let currentTeam = "all";
 
-const buttonSets = {
-    technical: `
-    <button data-type="all" class="btn"><span>All</span></button>
-    <button data-type="unity" class="btn"><span>Unity</span></button>
-    <button data-type="unreal" class="btn"><span>Unreal</span></button>
-    `,
-    design: `
-    <button data-type="all" class="btn"><span>All</span></button>
-    <button data-type="2d" class="btn"><span>2D</span></button>
-    <button data-type="3d" class="btn"><span>3D</span></button>
-    `
-};
+    const emptyMessage = document.createElement("p");
+    emptyMessage.className = "filter-empty";
+    emptyMessage.textContent = "No projects match these filters. Try selecting All.";
+    emptyMessage.setAttribute("role", "status");
+    emptyMessage.setAttribute("aria-live", "polite");
+    emptyMessage.hidden = true;
+    gallery.append(emptyMessage);
 
-function changeCategroy(category){
-    filterButtonContainer.innerHTML = buttonSets[category];
+    function filterProjects() {
+        let visibleCount = 0;
+        projects.forEach(project => {
+            const matches = project.dataset.category === currentCategory &&
+                (currentType === "all" || project.dataset.type === currentType) &&
+                (currentTeam === "all" || project.dataset.team === currentTeam);
+            project.classList.toggle("hide", !matches);
+            project.classList.toggle("show", matches);
+            project.hidden = !matches;
+            project.style.animation = reducedMotion.matches ? "none" : "";
+            if (matches) visibleCount += 1;
+        });
+        emptyMessage.hidden = visibleCount > 0;
+    }
 
-    const newButtons = document.querySelectorAll(".filter-button button");
+    function updateTypeButtons() {
+        filterButtonContainer.querySelectorAll("button").forEach(button => {
+            const selected = button.dataset.type === currentType;
+            button.setAttribute("aria-pressed", String(selected));
+            button.querySelector("span").classList.toggle("active", selected);
+        });
+    }
 
-    newButtons.forEach(btn=>{
-        btn.addEventListener("click",()=>{
-
-            newButtons.forEach(b=>{
-                b.querySelector("span").classList.remove("active");
+    function selectCategory(category) {
+        if (!filters[category]) return;
+        currentCategory = category;
+        currentType = "all";
+        currentTeam = "all";
+        radios.forEach(radio => { radio.checked = radio.id === "all"; });
+        categoryButtons.forEach(button => {
+            const selected = button.dataset.category === currentCategory;
+            button.setAttribute("aria-pressed", String(selected));
+            button.classList.toggle("active", selected);
+        });
+        filterButtonContainer.replaceChildren();
+        filters[currentCategory].forEach(([type, label]) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.dataset.type = type;
+            button.className = "btn";
+            const text = document.createElement("span");
+            text.textContent = label;
+            button.append(text);
+            button.addEventListener("click", () => {
+                currentType = type;
+                updateTypeButtons();
+                filterProjects();
             });
+            filterButtonContainer.append(button);
+        });
+        updateTypeButtons();
+        filterProjects();
+    }
 
-            btn.querySelector("span").classList.add("active");
-
-            currentType = btn.dataset.type;
+    categoryButtons.forEach(button => {
+        button.addEventListener("click", () => selectCategory(button.dataset.category));
+    });
+    radios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            if (!radio.checked) return;
+            currentTeam = radio.id;
             filterProjects();
         });
     });
-}
-
-function filterProjects(){
-
-    projects.forEach(project => {
-
-        const category = project.dataset.category;
-        const type = project.dataset.type;
-        const id = project.id;
-
-        if(category !== currentCategory){
-            project.classList.add("hide");
-            project.classList.remove("show");
-            return;
-        }
-
-        if((currentType === "all" || currentType === type) &&
-         (currentId === "all" || currentId === id)) {
-            project.classList.remove("hide")
-            project.classList.add("show")
-        }
-        else{
-            project.classList.add("hide");
-            project.classList.remove("show");
-        }
-    });
-}
-
-categoryButtons.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-        currentCategory = btn.dataset.category;
-        changeCategroy(currentCategory)
-        filterProjects();
-    });
-});
-
-
-radios.forEach(radio => {
-    radio.addEventListener("change",()=>{
-        currentId = radio.id;
-        filterProjects();
-    })
-})
-
-changeCategroy(currentCategory)
-filterProjects();
-document.querySelector('.filter-button button[data-type="all"] span').classList.add("active");
+    reducedMotion.addEventListener("change", filterProjects);
+    selectCategory(currentCategory);
+})();

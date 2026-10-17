@@ -1,3 +1,5 @@
+(() => {
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 let words = document.querySelectorAll(".word");
 words.forEach((word)=>{
     let letters = word.textContent.split("");
@@ -35,3 +37,4 @@ let changeText = ()=>{
 
 changeText();
 setInterval(changeText,3000);
+})();
